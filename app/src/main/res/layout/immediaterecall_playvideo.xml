@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".ImmediateRecallVideo"
+    android:id="@+id/ImmediateRecallVideo">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="130dp"
+        android:layout_height="74dp"
+        android:layout_x="139dp"
+        android:layout_y="465dp"
+        android:background="@drawable/roundbutton"
+        android:onClick="playvideo"
+        android:text="Play"
+        android:textAllCaps="false"
+         />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gify"
+        android:layout_width="86dp"
+        android:layout_height="103dp"
+        android:layout_x="169dp"
+        android:layout_y="674dp"
+        android:background="@drawable/rotatedevice" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@android:style/Widget.DeviceDefault.Light.TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="12dp"
+        android:layout_y="289dp"
+        android:text="Let's watch a story -"
+        android:textColor="#FF9100"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="39dp"
+        android:layout_x="79dp"
+        android:layout_y="427dp"
+        android:text='" Try to remember the events in the story "'
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="439dp"
+        android:layout_height="298dp"
+        android:layout_x="-6dp"
+        android:layout_y="-25dp"
+        app:srcCompat="@drawable/caterpillar" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="88dp"
+        android:layout_y="325dp"
+        android:text="&quot;The Caterpillar looks for a shoe&quot;"
+        android:textColor="#FF9100"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</AbsoluteLayout>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/underwater"
+    tools:context=".Naming4"
+    android:id="@+id/Naming4">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gify"
+        android:layout_width="446dp"
+        android:layout_height="336dp"
+        android:layout_x="-26dp"
+        android:layout_y="471dp"
+        android:background="@mipmap/tort" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
+        android:layout_x="280dp"
+        android:layout_y="703dp"
+        app:srcCompat="@mipmap/ball" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="93dp"
+        android:layout_height="51dp"
+        android:layout_x="-11dp"
+        android:layout_y="580dp"
+        android:rotation="-30"
+        app:srcCompat="@drawable/shells" />
+
+    <Button
+        android:id="@+id/tort_o"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="20dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:onClick="click_tort"
+        android:text="O"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tort_o2"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="210dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:onClick="click_tort"
+        android:text="O"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tort_t"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="65dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:text="T"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold"
+        android:onClick="click_tort"
+        />
+
+    <Button
+        android:id="@+id/tort_r"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="260dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:text="R"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold"
+        android:onClick="click_tort"/>
+
+    <Button
+        android:id="@+id/tort_e"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="310dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:onClick="click_tort"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:text="E"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tort_t2"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="160dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:onClick="click_tort"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:text="T"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tort_i"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="360dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:onClick="click_tort"
+        android:color="#FF3FC2FD"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:text="I"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/tort_s"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_x="110dp"
+        android:layout_y="210dp"
+        android:background="@drawable/naming_button"
+        android:color="#FF3FC2FD"
+        android:onClick="click_tort"
+        android:shadowRadius="20"
+        android:singleLine="true"
+        android:soundEffectsEnabled="true"
+        android:text="S"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#918A8A"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/Dash2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="65dp"
+        android:layout_y="118dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash1"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="20dp"
+        android:layout_y="118dp"
+        android:enabled="false"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash5"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="210dp"
+        android:layout_y="118dp"
+        android:enabled="false"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash6"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="260dp"
+        android:layout_y="118dp"
+        android:enabled="false"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash7"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="310dp"
+        android:layout_y="118dp"
+        android:enabled="false"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash8"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="360dp"
+        android:layout_y="118dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash4"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="160dp"
+        android:enabled="false"
+        android:layout_y="118dp"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/Dash3"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_x="110dp"
+        android:layout_y="118dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="39dp"
+        android:layout_height="33dp"
+        android:layout_x="147dp"
+        android:layout_y="305dp"
+        android:background="@drawable/undo"
+        android:onClick="resetActivity"/>
+
+    <Button
+        android:id="@+id/save_changes"
+        android:layout_width="46dp"
+        android:layout_height="30dp"
+        android:layout_x="210dp"
+        android:layout_y="305dp"
+        android:background="@drawable/next"
+        android:onClick="nextActivity" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="352dp"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="53dp"
+        android:layout_height="wrap_content"
+        android:layout_x="214dp"
+        android:layout_y="352dp"
+        android:text="Next" />
+
+    <ProgressBar
+        android:id="@+id/progressBar14"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="138dp"
+        android:layout_x="174dp"
+        android:layout_y="571dp" />
+
+</AbsoluteLayout>

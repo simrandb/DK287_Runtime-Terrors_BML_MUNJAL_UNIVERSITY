@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popupshape_orientation"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/popuptv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+
+    <Spinner
+        android:id="@+id/daysSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:spinnerMode="dialog"
+        android:prompt="@string/title"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="20dp"
+        android:layout_gravity="center_horizontal">
+        <Button android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitCenter"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_bgselector"
+                android:layout_marginHorizontal="10dp"
+                android:text="Cancel"
+        />
+
+    <Button android:id="@+id/okay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:background="@drawable/button_bgselector"
+        android:layout_marginHorizontal="10dp"
+        android:text="Okay"
+        />
+    </LinearLayout>
+
+</LinearLayout>

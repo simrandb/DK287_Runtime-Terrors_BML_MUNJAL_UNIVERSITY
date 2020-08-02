@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="info">प्रति वर्ष 1 मिलियन से अधिक लोगों को अल्जाइमर का सामना करना पड़ता है</string>
+    <string name="memberlogin">सदस्य लॉगिन</string>
+    <string name="username">उपयोगकर्ता नाम</string>
+    <string name="pass">P अशकब्द</string>
+    <string name="forgot">पासवर्ड भूल गए?</string>
+    <string name="signup">कोई खाता नहीं है? नाम लिखो</string>
+    <string name="login_now">रोग के लिए अपने अवसरों की जांच करने के लिए अब लॉगिन करें!</string>
+    <string name="login">लॉग इन करें</string>
+
+</resources>

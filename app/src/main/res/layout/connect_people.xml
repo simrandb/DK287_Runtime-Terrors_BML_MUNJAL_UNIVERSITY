@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MyCommunities">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_marginTop="-50dp"
+        app:srcCompat="@drawable/strip_connect" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:layout_marginTop="130dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textv"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:text="Online"
+                android:textColor="#F87A1C"
+                android:textSize="32sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/acme" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textv"
+                android:text="Alzheimer’s"
+                android:textColor="#F4D736"
+                android:textSize="32sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/acme" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="109dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/textView16"
+                android:text="Forums"
+                android:textColor="#E41C1C"
+                android:textSize="32sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/acme" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="371dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView16"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:onClick="website"
+                android:paddingLeft="10sp"
+                android:text="Alzheimer’s Association – Community"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="348dp"
+                android:layout_height="101dp"
+                android:layout_below="@id/textView10"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- Support Groups\n- In person Support Groups   \n- Message Boards / online community \n- Find Local Resources"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+
+            <TextView
+                android:id="@+id/TextView19"
+                android:layout_width="387dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView18"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:onClick="website"
+                android:padding="5dp"
+                android:paddingLeft="10sp"
+                android:text="Alzheimer’s Disease Support Group - \n ALZ Connected"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextView19"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- Message Boards\n- Caregivers Forum and I have Alzheimer’s Forum"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+
+            <TextView
+                android:id="@+id/TextView21"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView20"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="10sp"
+                android:text="Alzheimer’s Forum"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="website"/>
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TextView21"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- Talk about things regarding Alzheimer’s\n- over 200 discussion
+topics and about 2000 posts"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView22"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="10sp"
+                android:text="Alzheimer’s Association Chat Rooms"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="website"/>
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView23"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- Talk to others about Alzheimer’s by joining one of several a chat rooms"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView24"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="10sp"
+                android:text="The Alzheimer List"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="website"/>
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView25"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- Receive emails from an online support group of people with Alzheimer’s, caregivers and medical
+professionals"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView26"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="10sp"
+                android:text="Alzheimer’s Disease"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="website"/>
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView27"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- A forum with over 80,000 members that welcomes all people who have been impacted by Alzheimer’s
+in some way"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+            <TextView
+                android:id="@+id/textView29"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView28"
+                android:layout_marginTop="12dp"
+                android:paddingLeft="10sp"
+                android:text="Dementia Guide"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="website"/>
+            <TextView
+                android:id="@+id/textView30"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView29"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- Information about dementia and related diseases and tools to track the symptoms and changes
+over time."
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView30"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="-3dp"
+                android:onClick="website"
+                android:padding="5dp"
+                android:paddingLeft="10sp"
+                android:text="Dementia Advocacy and Support Network International"
+                android:textColor="#0785C5"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView32"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView31"
+                android:layout_marginTop="1dp"
+                android:paddingLeft="30dp"
+                android:text="- International online support network for all those affected by dementia"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                app:fontFamily="@font/andika" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/connect_icon" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-10dp"
+        android:text="Connect"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:fontFamily="sans-serif" />
+
+
+</RelativeLayout>

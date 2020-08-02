@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Instructions">
+
+
+    <TextView
+        android:id="@+id/textView6"
+
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_marginLeft="20dp"
+        android:layout_x="5dp"
+        android:layout_y="401dp"
+        android:fontFamily="@font/andika"
+        android:text='4.At any instant of time you can swipe up the screen to re-read the instructions click -"How to Play",jump to the next stage click -"Next Stage",change your sound and other settings click - "Settings" or discontinue playing the game click - "Exit".'
+        android:textColor="#0E0C0C"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_x="5dp"
+        android:layout_y="318dp"
+        android:fontFamily="@font/andika"
+        android:text="3.Detailed instructions about each stage will be shown to you ."
+        android:textColor="#070606"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_x="5dp"
+        android:layout_y="152dp"
+        android:fontFamily="@font/andika"
+        android:text="1. The game consists of 10 stages , along with a fun-questionnaire ."
+        android:textColor="#070606"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="487dp"
+        android:layout_height="155dp"
+        android:layout_x="-44dp"
+        android:layout_y="-12dp"
+        app:srcCompat="@drawable/strip1" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="84dp"
+        android:layout_height="69dp"
+        android:layout_x="169dp"
+        android:layout_y="16dp"
+        app:srcCompat="@drawable/instructions" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="159dp"
+        android:layout_y="83dp"
+        android:text="Instructions"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_x="85dp"
+        android:layout_y="694dp"
+        android:background="@drawable/roundbutton_instructions"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Back to Home Screen"
+        android:textAllCaps="false"
+        android:onClick="Back_home"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_x="5dp"
+        android:layout_y="235dp"
+        android:fontFamily="@font/andika"
+        android:text="2. Introduction before  each stage tells the particular that we are checking."
+        android:textColor="#070606"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:layout_x="5dp"
+        android:layout_y="600dp"
+        android:fontFamily="@font/andika"
+        android:text="5.Remember you can ony play a particular stage only once."
+        android:textColor="#0B0909"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+
+</AbsoluteLayout>

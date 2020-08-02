@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExecutiveFunctioningPart2"
+    android:id="@+id/ExecutiveFunctioningPart2"
+    android:background="@drawable/dark_cave">
+
+    <ImageView
+        android:id="@+id/coinsack"
+        android:layout_width="197dp"
+        android:layout_height="280dp"
+        android:layout_x="123dp"
+        android:layout_y="565dp"
+        app:srcCompat="@drawable/coinsack" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="134dp"
+        android:layout_height="104dp"
+        android:layout_x="14dp"
+        android:layout_y="146dp"
+        app:srcCompat="@drawable/coin1_3"
+        android:onClick="OnClick3"/>
+
+    <ImageView
+        android:id="@+id/imageViewB"
+        android:layout_width="154dp"
+        android:layout_height="94dp"
+        android:layout_x="88dp"
+        android:layout_y="28dp"
+        app:srcCompat="@drawable/coin1_b"
+        android:onClick="OnClickB"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="180dp"
+        android:layout_height="116dp"
+        android:layout_x="156dp"
+        android:layout_y="384dp"
+        app:srcCompat="@drawable/coin3_1"
+        android:onClick="OnClick1"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="124dp"
+        android:layout_height="116dp"
+        android:layout_x="302dp"
+        android:layout_y="230dp"
+        app:srcCompat="@drawable/coin3_4"
+        android:onClick="OnClick4"/>
+
+    <ImageView
+        android:id="@+id/imageViewC"
+        android:layout_width="102dp"
+        android:layout_height="100dp"
+        android:layout_x="284dp"
+        android:layout_y="498dp"
+        app:srcCompat="@drawable/coin4_c"
+        android:onClick="OnClickC"/>
+
+    <ImageView
+        android:id="@+id/imageViewD"
+        android:layout_width="104dp"
+        android:layout_height="96dp"
+        android:layout_x="266dp"
+        android:layout_y="54dp"
+        app:srcCompat="@drawable/coin4_d"
+        android:onClick="OnClickD"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="118dp"
+        android:layout_height="128dp"
+        android:layout_x="32dp"
+        android:layout_y="298dp"
+        app:srcCompat="@drawable/coin6_2"
+        android:onClick="OnClick2"/>
+
+    <ImageView
+        android:id="@+id/imageViewA"
+        android:layout_width="112dp"
+        android:layout_height="110dp"
+        android:layout_x="24dp"
+        android:layout_y="532dp"
+        app:srcCompat="@drawable/coin6_a"
+        android:onClick="OnClickA"
+        />
+
+</AbsoluteLayout>

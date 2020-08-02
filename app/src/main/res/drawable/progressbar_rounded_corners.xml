@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <rotate
+            android:fromDegrees="90"
+            android:toDegrees="90"
+            >
+        <clip android:clipOrientation="vertical" android:gravity="bottom">
+        <shape>
+            <corners android:radius="10dp"/>
+            <solid android:color="@color/white"/>
+        </shape>
+        </clip>
+        </rotate>
+    </item>
+</layer-list> !-->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <rotate
+            android:fromDegrees="90"
+            android:toDegrees="90"
+            >
+            <shape
+                android:shape="line">
+                <stroke
+                    android:width="5dp"
+                    android:color="#d0d4d7"
+                    />
+            </shape>
+        </rotate>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip android:clipOrientation="vertical" android:gravity="bottom">
+
+            <shape
+                android:shape="line">
+                <stroke
+                    android:width="5dp"
+                    android:color="#ff0500"
+                    />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

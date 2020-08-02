@@ -1,0 +1,256 @@
+<resources>
+    <string name="app_name" translatable="false">Alzheimers_Detection</string>
+    <string name="title_activity_signup" translatable="false">Signup</string>
+    <string name="title_activity_play" translatable="false">Play</string>
+
+    <string-array name="languages_array">// name of the string array
+        <item>English</item>
+        // items
+        <item>Marathi</item>
+        <item>Gujurati</item>
+        <item>Hindi</item>
+        <item>Tamil</item>
+        <item>Telegu</item>
+        <item>Malayalam</item>
+    </string-array>
+
+    <string name="title_activity_forgot_password" translatable="false">ForgotPassword</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_q_r_present" translatable="false">QRPresent</string>
+    <string name="title_activity_generate_q_r" translatable="false">GenerateQR</string>
+    <string name="title_activity_signup_phone" translatable="false">SignupPhone</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label" translatable="false">First Fragment</string>
+    <string name="second_fragment_label" translatable="false">Second Fragment</string>
+    <string name="next" translatable="false">Next</string>
+    <string name="previous" translatable="false">Previous</string>
+
+    <string name="hello_first_fragment" translatable="false">Hello first fragment</string>
+    <string name="hello_second_fragment" translatable="false">Hello second fragment. Arg: %1$s</string>
+
+
+    <!-- STRINGS USED FOR STAGES !-->
+
+    <!-- Abstraction .xml!-->
+    <string name="basket1" translatable="false">SPORTS</string>
+    <string name="basket2" translatable="false">  INSTRUMENTS</string>
+    <string name="basket3" translatable="false"> FRUITS</string>
+
+    <!-- Attention .xml!-->
+    <string name="attentionSt1" translatable="false">Is this doughnut </string>
+    <string name="attentionSt2" translatable="false">Remember this doughnut !</string>
+    <string name="attentionsSt3" translatable="false">the same as previous one ?</string>
+    <string name="attentionSt4" translatable="false">DUNKIN\' DOUGHNUTS</string>
+    <string name="attentionbtn1" translatable="false">YES</string>
+    <string name="attentionbtn2" translatable="false">NO</string>
+
+    <!-- fluency ! .java and .xml-->
+    <string name="blueCloudText1" translatable="false">Give as many words as you can think of from the letter "A". Tap the microphone below to speak.</string>
+    <string name="blueCloudText2" translatable="false">Make sure you don\'t use proper nouns , numbers and different forms of a verb.</string>
+    <string name="buttonText1" translatable="false">Press on the mic to speak</string>
+    <string name="buttonText2" translatable="false">Listening...</string>
+
+    <!-- Orientation !-->
+    <string name="title" translatable="false">Select from</string>
+
+    <!-- Question Library.java !-->
+
+    <!-- Visuoperception .java and .xml!-->
+    <string name="VisuoperceptionSt1" translatable="false">Look for 6 Hidden Words in the picture below</string>
+    <string name="VisuoperceptionSt2" translatable="false">Now, choose these 6 words from the options below</string>
+    <string name="Visuoperception_opt1" translatable="false">Not</string>
+    <string name="Visuoperception_opt2" translatable="false">Pages</string>
+    <string name="Visuoperception_opt3" translatable="false">Tree</string>
+    <string name="Visuoperception_opt4" translatable="false">Novel</string>
+    <string name="Visuoperception_opt5" translatable="false">Read</string>
+    <string name="Visuoperception_opt6" translatable="false">Dog</string>
+    <string name="Visuoperception_opt7" translatable="false">Man</string>
+    <string name="Visuoperception_opt8" translatable="false">Words</string>
+    <string name="Visuoperception_opt9" translatable="false">No</string>
+    <string name="Visuoperception_opt10" translatable="false">Or</string>
+    <string name="Visuoperception_opt11" translatable="false">Cat</string>
+    <string name="Visuoperception_opt12" translatable="false">Book</string>
+
+
+    <!-- Scoring page !-->
+    <string name="scoretitle" translatable="false">Results</string>
+    <string name="result1" translatable="false">You might have Alzheimer\'s Disease</string>
+    <string name="result2" translatable="false">You might not have Alzheimer\'s Disease</string>
+
+
+    <!--lANGUAGE -->
+
+    <string name="selectlanguage" translatable="false">select language</string>
+    <string name="english" translatable="false">"English"</string>
+    <string name="hindi" translatable="false">"Hindi"</string>
+
+    <!--                            VI                         -->
+
+    <string name="VI_Instructions" translatable="false">        Welcome to Alzheimers Detection Game. . . Necessary instructions will be recited to you before the starting of each stage,follow those instructions to ace the stage    </string>
+
+    <!--Introduction Screens how to play -->
+    <string name="VI_Memory_intro" translatable="false"> Welcome to Stage 1 . . . Memory. . . Listen to the story of the caterpillar carefully and then answer the questions accordingly. . </string>
+    <string name="VI_Attention_intro" translatable="false">  Welcome to stage 2. . .  Attention . . .You will hear a series of alphabets. . .tap on the screen, everytime the alphabet. . . A is heard. . .please tap to proceed further</string>
+    <string name="VI_Calculation_intro" translatable="false">  Welcome to stage 3 . . . Calculation . . .You will be asked 3 questions,calculate mentally and speak out the larger value . . . please tap to proceed further </string>
+    <string name="VI_Sentence_Repetition_intro" translatable="false"> You are now on stage 4. . . Sentence repetition . . . sentences will be recited to you two times . . . recall and record these sentences. . . in exactly the same manner . . . tap to listen to the first sentence  </string>
+    <string name="VI_Verbal_fluency_intro" translatable="false">Hello again . . . you are now on stage 5 . . . Verbal fluency . . . let\'s have a fun activity . . . record as many words as possible . . . from the given alphabet . . .  Tap to proceed further </string>
+    <string name="VI_Abstraction_intro" translatable="false">  Welcome to stage 6 Abstraction Let\'s check for similarities between objects . ..you will be required to swipe the screen according to the instructions which you will hear shortly. . .  Tap to proceed further</string>
+    <string name="VI_Delayed_Recall_intro" translatable="false"> This is stage 7 . . .  Delayed recall . . . Recall the story you heard about the Caterpillars Adventures  . .  answer a few more questions now. . . Tap to proceed further</string>
+    <string name="VI_Orientation_intro" translatable="false"> Welcome to stage 8  . . . orientation, the last stage of the game...In this stage, The Alzheimer’s Detection Pvt. Ltd. are hiring full time employees. You are one of the aspiring job seekers , you land a telephonic interview chance with them. You will be asked 6 simple questions , give one word answers for them and increase your chances to get shortlisted.. . .Tap to proceed further    </string>
+
+    <!--After stage-->
+    <string name="after_VI_Memory" translatable="false"> Well Done! </string>
+    <string name="after_Attention" translatable="false">  good job </string>
+    <string name="after_Calculation" translatable="false"> Well Done! </string>
+    <string name="after_Sentence_Repetition" translatable="false"> good job </string>
+    <string name="after_Verbal_fluency" translatable="false">Well Done!</string>
+    <string name="after_Abstraction" translatable="false"> good job  </string>
+    <string name="after_Delayed_Recall" translatable="false"> Well Done! </string>
+    <string name="after_Orientation" translatable="false">good job  </string>
+
+
+    <!--General instructions for swipe screens-->
+    <string name="Swipeleft" translatable="false">Swipe left to answer    </string>
+    <string name="Swiperight" translatable="false">Swipe right to answer   </string>
+    <string name="Swipeup" translatable="false">swipe up to repeat   </string>
+    <string name="Swipedown" translatable="false">Swipe down to answer  </string>
+    <string name="Enter_response" translatable="false"> Enter Your response </string>
+    <string name="tap_procede" translatable="false">please tap to proceed further</string>
+
+    <!-- Verbal fluency  -->
+    <string name="Text1" translatable="false">Give as many words as you can think of from the letter "A".. Press on the screen to speak</string>
+    <string name="Text2" translatable="false">Make sure you don\'t use proper nouns , numbers and different forms of a verb.</string>
+
+    <!--sentence repetition for blind-->
+
+    <string name="sentence1" translatable="false">The car turned the corner.</string>
+    <string name="sentence2" translatable="false">Open the jar carefully.</string>
+    <string name="sentence3" translatable="false">My parents and I went to a movie.</string>
+    <string name="sentence4" translatable="false">The paper and pencil sat idle on the desk.</string>
+    <string name="sentence5" translatable="false">She opened the door.</string>
+    <string name="sentence6" translatable="false">He was eating and talking.</string>
+    <string name="sentence7" translatable="false">He wanted to bring peace to his kingdom.</string>
+    <string name="sentence8" translatable="false">People were anxious and unhappy.</string>
+
+    <!--Delayed recall-->
+
+    <string-array name="DRQuetion">
+        <item>Who did the Caterpillar not ask for help ?</item>
+        <item>What are Crabs shoes used for?</item>
+        <item>Fill in the blank. The Frogs shoe is dash for the Caterpillar.</item>
+        <item>What has the Caterpillar lost ?</item>
+        <item>What does the caterpillar decide to do at the end ?</item>
+        <item>What was the sequence in which caterpillar met her friends?</item>
+    </string-array>
+    <string-array name="DR_Option1">
+        <item>squirrel</item>
+        <item>frog</item>
+        <item>spider</item>
+    </string-array>
+    <string-array name="DR_Option2">
+        <item>swimming</item>
+        <item>walking</item>
+        <item>digging</item>
+    </string-array>
+    <string-array name="DR_Option3">
+        <item>too small</item>
+        <item>too big</item>
+        <item>suitable</item>
+    </string-array>
+    <string-array name="DR_Option4">
+        <item>Shoe </item>
+        <item>Glasses </item>
+        <item> Hat</item>
+    </string-array>
+    <string-array name="DR_Option5">
+        <item>Lay eggs </item>
+        <item> Make a cozy cocoon</item>
+        <item> Look for more shoes</item>
+    </string-array>
+    <string-array name="DR_Option6">
+        <item> Frog -> Spider -> Crab</item>
+        <item> Spider -> Frog -> Crab</item>
+        <item>Crab -> Spider -> Frog </item>
+    </string-array>
+
+
+    <!--Immediate recall/Memory-->
+
+    <string-array name="IRQuetions">
+        <item>What was the sequence in which caterpillar met her friends?</item>
+        <item>What does the caterpillar decide to do at the end ?</item>
+    </string-array>
+    <string-array name="IR_Option1">
+        <item> Frog -> Spider -> Crab</item>
+        <item> Spider -> Frog -> Crab</item>
+        <item>Crab -> Spider -> Frog </item>
+    </string-array>
+    <string-array name="IR_Option2">
+        <item>Lay eggs </item>
+        <item> Make a cozy cocoon</item>
+        <item> Look for more shoes</item>
+    </string-array>
+
+    <!--Abstraction-->
+
+    <string-array name="Abstraction_que">
+        <item>How Train and bus Are alike?</item>
+        <item>How Dog and Cat Are alike?</item>
+    </string-array>
+    <string-array name="Abstraction_Option1">
+        <item>Both are means of transportation</item>
+        <item>Both can move on their own</item>
+        <item>Both have four wheels</item>
+    </string-array>
+    <string-array name="Abstraction_Option2">
+        <item>Both are reptiles</item>
+        <item>Both are animals</item>
+        <item>Both can talk</item>
+    </string-array>
+
+
+    <!--   Calculation   -->
+
+    <string-array name="Calculation_que">
+        <item>3/5 or 1/5 which is greater?</item>
+        <item>A burger of 250 calories with pizza of 500 calories or a plate of veggies of 250 calories. Which will have less calories?</item>
+        <item>1 bottle of 1000 ml cold drink or 3 bottles of 250 ml each. Which is a greater quantity?</item>
+    </string-array>
+    <string-array name="Calculation_Option1">
+        <item>3/5</item>
+        <item>1/5</item>
+    </string-array>
+    <string-array name="Calculation_Option2">
+        <item>pizza with burger</item>
+        <item>veggies</item>
+    </string-array>
+    <string-array name="Calculation_Option3">
+        <item>1 bottle of 1000 ml</item>
+        <item>3 bottles of 250 ml each</item>
+    </string-array>
+
+
+    <!--  Orientation -->
+    <string name="intro" translatable="false">Welcome to Alzheimer\'s Detection private limited... Let\'s start with your interview </string>
+    <string name="Q1" translatable="false">Which day of the Month is Today ?</string>
+    <string name="Q2" translatable="false">What month is it , right now ?</string>
+    <string name="Q3" translatable="false">In which year are we ?</string>
+    <string name="Q4" translatable="false">Which day of the week is Today ?</string>
+    <string name="Q5" translatable="false">What country are you from ?</string>
+    <string name="Q6" translatable="false">Which city are you in right now ?</string>
+
+    <!--login!-->
+    <string name ="info">More than 1 million people face Alzheimers per year</string>
+    <string name ="memberlogin">Member Login</string>
+    <string name ="username">Username</string>
+    <string name ="pass">Password</string>
+    <string name ="forgot">Forgot Password</string>
+    <string name ="signup">Don t have an account? Sign up</string>
+    <string name="login_now"> Login now to check your chances for the Disease !</string>
+    <string name = "login">Log In</string>
+
+
+</resources>

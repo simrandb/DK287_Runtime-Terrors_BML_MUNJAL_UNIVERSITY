@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Signup" >
+
+    <TextView
+        android:id="@+id/signupwithemail"
+        android:layout_width="325dp"
+        android:layout_height="31dp"
+        android:layout_x="70dp"
+        android:layout_y="324dp"
+        android:clickable="true"
+        android:linksClickable="true"
+        android:text="Sign up with Email Id instead?"
+        android:textColor="@color/blue"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="427dp"
+        android:layout_height="137dp"
+        android:layout_x="0dp"
+        android:layout_y="-11dp"
+        app:srcCompat="@drawable/strip" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="94dp"
+        android:layout_height="66dp"
+        android:layout_x="164dp"
+        android:layout_y="14dp"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="126dp"
+        android:layout_y="75dp"
+        android:text="Member Registration"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/usernameT"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="260dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="            Phone number"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/lastnameT"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_x="233dp"
+        android:layout_y="204dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="Last Name"
+        android:inputType="text"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/firstnameT"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
+        android:layout_x="97dp"
+        android:layout_y="204dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="First Name"
+        android:inputType="text"
+        android:textColor="#000000" />
+
+
+    <EditText
+        android:id="@+id/otp_et1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="32dp"
+        android:layout_y="295dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        android:hint=""
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/otp_et2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="91dp"
+        android:layout_y="293dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint=""
+        android:textSize="25dp"
+        android:inputType="text"
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/otp_et6"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="332dp"
+        android:layout_y="293dp"
+        android:fontFamily="sans-serif-condensed"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/otp_et5"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="271dp"
+        android:layout_y="292dp"
+        android:fontFamily="sans-serif-condensed"
+        android:textSize="25dp"
+        android:inputType="text"
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/otp_et4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="211dp"
+        android:layout_y="293dp"
+        android:fontFamily="sans-serif-condensed"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <EditText
+        android:id="@+id/otp_et3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="293dp"
+        android:fontFamily="sans-serif-condensed"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/verificationcodeimage"
+        android:layout_width="28dp"
+        android:layout_height="24dp"
+        android:layout_x="52dp"
+        android:layout_y="153dp"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/genderimage"
+        android:layout_width="36dp"
+        android:layout_height="34dp"
+        android:layout_x="54dp"
+        android:layout_y="376dp"
+        app:srcCompat="@drawable/gender" />
+
+    <TextView
+        android:id="@+id/birthdatetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="105dp"
+        android:layout_y="469dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Birthdate"
+        android:textColor="#58CBFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/gendertitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="105dp"
+        android:layout_y="378dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Gender"
+        android:textColor="#58CBFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/birthdateimage"
+        android:layout_width="56dp"
+        android:layout_height="26dp"
+        android:layout_x="43dp"
+        android:layout_y="464dp"
+        app:srcCompat="@drawable/dob" />
+
+    <DatePicker
+        android:id="@+id/birthdate"
+        android:layout_width="wrap_content"
+        android:layout_height="97dp"
+        android:layout_x="80dp"
+        android:layout_y="506dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner" />
+
+    <ImageView
+        android:id="@+id/phonenumberimage"
+        android:layout_width="37dp"
+        android:layout_height="31dp"
+        android:layout_x="56dp"
+        android:layout_y="275dp"
+        app:srcCompat="@drawable/username" />
+
+    <ImageView
+        android:id="@+id/familyimage"
+        android:layout_width="69dp"
+        android:layout_height="60dp"
+        android:layout_x="171dp"
+        android:layout_y="653dp"
+        app:srcCompat="@drawable/family" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_x="104dp"
+        android:layout_y="414dp"
+
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male     " />
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female     " />
+
+        <RadioButton
+            android:id="@+id/other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/plus91"
+        android:layout_width="56dp"
+        android:layout_height="29dp"
+        android:layout_x="96dp"
+        android:layout_y="270dp"
+android:textSize="20dp"
+        android:text="+91" />
+
+    <TextView
+        android:id="@+id/verificationcodetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="69dp"
+        android:layout_y="229dp"
+        android:text="Enter 6 digits verificatio code sent to:"
+        android:textColor="@color/blue"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/gotonext"
+        android:layout_width="305dp"
+        android:layout_height="34dp"
+        android:layout_x="54dp"
+        android:layout_y="725dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Tell us more about your family and lifestyle"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/verifycode"
+        android:layout_width="133dp"
+        android:layout_height="76dp"
+        android:layout_x="142dp"
+        android:layout_y="449dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Verify Code"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tophonenumber"
+        android:layout_width="169dp"
+        android:layout_height="29dp"
+        android:layout_x="149dp"
+        android:layout_y="250dp"
+        android:text="+91"
+        android:textColor="@color/blue"
+        android:textSize="17dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/verificationcodeheading"
+        android:layout_width="272dp"
+        android:layout_height="49dp"
+        android:layout_x="95dp"
+        android:layout_y="145dp"
+
+        android:text="Verification Code"
+        android:textColor="@color/blue"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/nameimage"
+        android:layout_width="29dp"
+        android:layout_height="35dp"
+        android:layout_x="61dp"
+        android:layout_y="218dp"
+        app:srcCompat="@drawable/name" />
+
+    <ImageView
+        android:id="@+id/nextarrow"
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_x="315dp"
+        android:layout_y="602dp"
+        app:srcCompat="@drawable/nextarrow" />
+
+</AbsoluteLayout>

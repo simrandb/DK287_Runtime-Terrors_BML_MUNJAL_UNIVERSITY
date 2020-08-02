@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/popup_element"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:background="@drawable/popupshape_familyhistory"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/popuptv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_x="42dp"
+        android:layout_y="14dp"
+        android:textColor="#000"
+        android:textSize="20sp" />
+
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_x="197dp"
+        android:layout_y="238dp"
+        android:background="#ffffff"
+        android:scaleType="fitCenter"
+        android:text="Exit"
+        android:textAllCaps="false"
+        android:textColor="#8F8E8E"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/okay"
+        android:layout_width="194dp"
+        android:layout_height="34dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_x="111dp"
+        android:layout_y="199dp"
+        android:background="#58CBFF"
+        android:fontFamily="sans-serif-condensed"
+        android:scaleType="fitCenter"
+        android:text="Save Information"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_x="6dp"
+        android:layout_y="1dp"
+        android:fontFamily="serif"
+        android:text="Who among the following in your family is/are diagnosed with Alzheimer's Disease ?"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <CheckBox
+        android:id="@+id/checkBox7"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_x="2dp"
+        android:layout_y="148dp"
+        android:fontFamily="serif"
+        android:text="Brother/Sister"
+        android:textColor="#00B0FF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <CheckBox
+        android:id="@+id/checkBox14"
+        android:layout_width="227dp"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="110dp"
+        android:fontFamily="serif"
+        android:text="Parent(s)"
+        android:textColor="#00B0FF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <CheckBox
+        android:id="@+id/checkBox13"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_x="0dp"
+        android:layout_y="71dp"
+        android:fontFamily="serif"
+        android:text="Grandparent(s)"
+        android:textColor="#00B0FF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="81dp"
+        android:layout_height="73dp"
+        android:layout_x="185dp"
+        android:layout_y="91dp"
+        app:srcCompat="@drawable/family1" />
+
+
+</AbsoluteLayout>

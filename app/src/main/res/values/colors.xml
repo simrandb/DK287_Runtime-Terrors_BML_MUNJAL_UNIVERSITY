@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="blue">#58CBFF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="button">#0099CC</color>
+    <color name="buttonPressed">#03749A</color>
+    <color name="Black">#000000</color>
+
+<!--Scoring page colors!-->
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="fill_1">#E53935</color>
+    <color name="empty_1">#EF9A9A</color>
+
+    <color name="fill_2">#8E24AA</color>
+    <color name="empty_2">#E1BEE7</color>
+
+    <color name="fill_3">#00ACC1</color>
+    <color name="empty_3">#B2EBF2</color>
+
+    <color name="fill_4">#F9A825</color>
+    <color name="empty_4">#BEF8C26B</color>
+
+    <color name="fill_5">#5C6BC0</color>
+    <color name="empty_5">#C5CAE9</color>
+
+    <color name="scoreButtonUnpressed">#E4E009</color>
+    <color name="scoreButtonPressed">#CAC608</color>
+
+    <color name="row">#F8F43B</color>
+    <color name="rowshape">#F3EFEF</color>
+</resources>

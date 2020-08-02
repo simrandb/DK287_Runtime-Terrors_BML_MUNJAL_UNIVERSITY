@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Attention"
+    android:id="@+id/Attention">
+    <!-- android:background="@drawable/nature11"-->
+
+
+    <ImageView
+        android:id="@+id/donutstand"
+        android:layout_width="383dp"
+        android:layout_height="869dp"
+        android:layout_x="2dp"
+        android:layout_y="25dp" />
+
+    <TextView
+        android:id="@+id/instruction1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="86dp"
+        android:layout_y="71dp"
+        android:fontFamily="cursive"
+        android:text="@string/attentionSt2"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="161dp"
+        android:layout_height="83dp"
+        android:layout_x="77dp"
+        android:layout_y="368dp" />
+
+    <Button
+        android:id="@+id/no"
+        android:layout_width="113dp"
+        android:layout_height="58dp"
+        android:layout_x="221dp"
+        android:layout_y="690dp"
+        android:background="@drawable/shape_button"
+        android:text="@string/attentionbtn2"
+        android:textColor="#0A0909"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="545dp" />
+
+    <Button
+        android:id="@+id/yes"
+        android:layout_width="113dp"
+        android:layout_height="58dp"
+        android:layout_x="50dp"
+        android:layout_y="690dp"
+        android:background="@drawable/shape_button"
+        android:text="@string/attentionbtn1"
+        android:textColor="#0A0808"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="215dp"
+        tools:layout_editor_absoluteY="545dp" />
+
+
+    <ImageView
+        android:id="@+id/donutdecor"
+        android:layout_width="131dp"
+        android:layout_height="124dp"
+        android:layout_x="225dp"
+        android:layout_y="305dp"
+        />
+
+    <ImageView
+        android:id="@+id/donutdecor2"
+        android:layout_width="155dp"
+        android:layout_height="56dp"
+        android:layout_x="174dp"
+        android:layout_y="406dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="234dp"
+        android:id="@+id/uncle"
+        android:layout_height="423dp"
+        android:layout_x="207dp"
+        android:src="@drawable/attention_uncle"
+        android:layout_y="271dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="265dp"
+        android:layout_height="37dp"
+        android:layout_x="65dp"
+        android:layout_y="160dp"
+        android:background="#AD9F059C" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@android:style/Widget.Holo.TextView"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_x="78dp"
+        android:layout_y="163dp"
+        android:text="@string/attentionSt4"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/instruction3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="86dp"
+        android:layout_y="89dp"
+        android:fontFamily="cursive"
+        android:text="@string/attentionsSt3"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/instruction2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="121dp"
+        android:layout_y="52dp"
+        android:fontFamily="cursive"
+        android:text="@string/attentionSt1"
+        android:textSize="27sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/open"
+        android:layout_width="100dp"
+        android:layout_height="69dp"
+        android:layout_x="159dp"
+        android:layout_y="484dp"
+        android:rotation="-20"
+        />
+
+
+
+
+</AbsoluteLayout>

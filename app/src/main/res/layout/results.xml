@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#fff"
+    android:fillViewport="true"
+    tools:context=".Results"
+    android:id="@+id/scorescreen"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/row"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/results"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/score_title"
+                android:text="@string/scoretitle"
+                android:fontFamily="sans-serif-black"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginTop="0dp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/graph"
+            android:orientation="vertical"
+            android:layout_marginVertical="10dp"
+            android:background="#fff"
+            android:layout_gravity="center_horizontal">
+
+            <include layout="@layout/bar"
+                android:id="@+id/set1"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set2"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set3"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set4"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set5"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set6"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set7"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set8"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set9"/>
+            <include layout="@layout/bar"
+                android:id="@+id/set10"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/totalscore"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/result_statement"
+            android:textAlignment="center"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/previousResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/scorebutton_bgselector"
+                android:paddingHorizontal="10dp"
+                android:text="See Previous Results"
+                android:textColor="#fff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp"
+                android:text="Overall Performance"
+                android:background="@drawable/scorebutton_bgselector"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="20dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:id="@+id/buttonGraph"/>
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp"
+                android:text="Generate QRC"
+                android:background="@drawable/scorebutton_bgselector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="20dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:id="@+id/buttonQrc"/>
+
+            <Button
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="7dp"
+                android:text="Go back to Home Screen"
+                android:background="@drawable/scorebutton_bgselector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:layout_gravity="center_horizontal"
+                android:paddingHorizontal="20dp"
+                android:textStyle="bold"
+                android:textSize="12dp"
+                android:id="@+id/buttonHome"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

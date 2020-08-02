@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Fluency_Intro"
+    android:id="@+id/Fluency_Intro">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_alignRight="@id/textView3"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="-211dp"
+        android:shadowColor="#616161"
+        android:text="Fluency"
+        android:textColor="#635C5C"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:fontFamily="@font/acme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="385dp"
+        android:layout_height="59dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="710dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="#F8A701"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:onClick="NextActivity"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="124dp"
+        android:layout_alignBottom="@id/textView1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="-129dp"
+        android:text="The letter 'A' fluency requires coordination of lexicosemantic knowledge, shifting from word to word, working memory, searching strategy and inhibition of irrelevant words which all highly depend on frontal lobe function and to a lesser extent the temporal lobe. "
+        android:textColor="#1B1919"
+        android:textSize="17sp"
+        app:fontFamily="@font/amaranth" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Talk till you drop !"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:fontFamily="@font/cantora_one" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="10sp"
+        android:text="Domain - "
+        android:textColor="#B52906"
+        android:textColorHint="#000000"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:fontFamily="@font/acme" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="282dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/stage9back" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/fluencyview"
+        android:layout_width="306dp"
+        android:layout_height="224dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="0dp"
+        android:background="@mipmap/ic_launcher"
+        android:scaleType="fitXY" />
+
+</RelativeLayout>

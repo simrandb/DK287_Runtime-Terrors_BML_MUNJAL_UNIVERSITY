@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.alzheimers_detection">
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@drawable/shape_button" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".OpeningScreen">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity> <!-- Login/Sign up/Home Screen -->
+        <activity android:name=".Login"></activity>
+        <activity android:name=".LoginOtpByPhone" />
+        <activity
+            android:name=".Signup"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Signup"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".SignupPhone" />
+        <activity android:name=".AskForJournal" >
+
+        </activity>
+        <activity android:name=".JournalQuestions" />
+        <activity android:name=".HomeScreen" />
+        <activity android:name=".Results" />
+        <activity android:name=".Instructions"/>
+        <activity android:name=".QRC"/>
+        <activity android:name=".Settings" />
+        <activity android:name=".FamilyHistory" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".Option_Screen" />
+        <activity android:name=".Roadmap" />
+
+
+        <!-- 10 Stages -->
+
+
+        <activity android:name=".ExecutiveFunctioning_Intro" />
+        <activity android:name=".ExecutiveFunctioning" />
+        <activity android:name=".ExecutiveFunctioningPart2" />
+        <activity android:name=".Naming_Intro" />
+        <activity android:name=".Naming4" />
+        <activity android:name=".Naming2" />
+        <activity android:name=".Naming1" />
+        <activity android:name=".Naming3" />
+        <activity android:name=".Abstraction_Intro" />
+        <activity android:name=".Abstraction" />
+        <activity android:name=".Calculation_Intro" />
+        <activity android:name=".Calculation" />
+        <activity android:name=".Orientation_Intro" />
+        <activity android:name=".Orientation" />
+        <activity android:name=".ImmediateRecall_Intro" >
+
+        </activity>
+        <activity android:name=".Immediate_recallPlayVideo" />
+        <activity android:name=".ImmediateRecallVideo" />
+        <activity android:name=".ImmediateRecall" />
+        <activity android:name=".Attention_Intro" />
+        <activity android:name=".Attention" />
+        <activity android:name=".Visuoperception_Intro" />
+        <activity android:name=".Visuoperception"/>
+        <activity android:name=".Fluency_Intro"/>
+        <activity android:name=".Fluency"/>
+        <activity android:name=".DelayedRecall_Intro" />
+        <activity android:name=".DelayedRecall" />
+
+
+
+        <!-- Visually Impaired -->
+
+        <activity android:name=".VI_Start"    android:noHistory="true"/>
+        <activity android:name=".VI_Memory_intro"    android:noHistory="true"/>
+        <activity android:name=".VI_Memory"   android:noHistory="true"/>
+        <activity android:name=".VI_Memory_ans"   android:noHistory="true"/>
+        <activity android:name=".VI_Attention_intro"  android:noHistory="true"/>
+        <activity android:name=".VI_Attention"   android:noHistory="true"/>
+        <activity android:name=".VI_Calculation_intro"  android:noHistory="true"/>
+        <activity android:name=".VI_Calculation"   android:noHistory="true"/>
+        <activity android:name=".VI_Calculation_ans"   android:noHistory="true"/>
+        <activity android:name=".VI_Sentence_Repetition_intro"   android:noHistory="true"/>
+        <activity android:name=".VI_Sentence_Repetition"   android:noHistory="true"/>
+        <activity android:name=".VI_Verbal_fluency_intro"   android:noHistory="true"/>
+        <activity android:name=".VI_Verbal_fluency"   android:noHistory="true"/>
+        <activity android:name=".VI_Abstraction_intro"   android:noHistory="true"/>
+        <activity android:name=".VI_Abstraction"   android:noHistory="true"/>
+        <activity android:name=".VI_Abstraction_ans"   android:noHistory="true"/>
+        <activity android:name=".VI_Delayed_Recall_intro"    android:noHistory="true"/>
+        <activity android:name=".VI_Delayed_Recall"   android:noHistory="true"/>
+        <activity android:name=".VI_Delayed_Recall_ans"   android:noHistory="true"/>
+        <activity android:name=".VI_Orientation_intro"   android:noHistory="true"/>
+        <activity android:name=".VI_Orientation"   android:noHistory="true"/>
+
+
+        <uses-library android:name="com.google.android.maps" />
+    </application>
+
+</manifest>

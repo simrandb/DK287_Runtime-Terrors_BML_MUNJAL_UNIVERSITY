@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Roadmap" >
+
+
+    <TextView
+        android:id="@+id/youarehere_MyJournal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="8dp"
+        android:layout_y="6dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="411dp"
+        android:layout_height="771dp"
+        android:layout_x="2dp"
+        android:layout_y="6dp"
+        app:srcCompat="@drawable/path" />
+
+    <TextView
+        android:id="@+id/supercoincollector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="29dp"
+        android:layout_y="711dp"
+        android:onClick="Stage1"
+        android:fontFamily="@font/andika"
+        android:text="Super Coin Collector"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/groupitright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="50dp"
+        android:layout_y="582dp"
+        android:fontFamily="@font/andika"
+        android:text="Group it Right!"
+        android:onClick="stage3"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/burstthemathout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="246dp"
+        android:layout_y="506dp"
+        android:fontFamily="@font/andika"
+        android:onClick="stage4"
+        android:text="Burst the math out!"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/CaterpillarAdventures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="242dp"
+        android:layout_y="398dp"
+        android:fontFamily="@font/andika"
+        android:text="Caterpillar Adventures"
+        android:onClick="stage6"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Talktillyoudrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="41dp"
+        android:layout_y="214dp"
+        android:fontFamily="@font/andika"
+        android:onClick="stage9"
+        android:text="Talk till you drop!"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/EideticEvocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="253dp"
+        android:layout_y="156dp"
+        android:fontFamily="@font/andika"
+        android:text="Eidetic Evocation"
+        android:onClick="stage10"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/MyJournal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="64dp"
+        android:layout_y="93dp"
+        android:fontFamily="@font/andika"
+        android:onClick="results"
+        android:text="My Journal"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/MysteryRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="269dp"
+        android:layout_y="277dp"
+        android:fontFamily="@font/andika"
+        android:text="Mystery Room"
+        android:onClick="stage8"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/DoughnutvsDoughnut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="24dp"
+        android:layout_y="338dp"
+        android:fontFamily="@font/andika"
+        android:onClick="stage7"
+        android:text="Doughnut vs Doughnut"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/thealzheimerstimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="35dp"
+        android:layout_y="445dp"
+        android:fontFamily="@font/andika"
+        android:onClick="stage5"
+        android:text="The Alzheimer's Times"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guestimate_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="249dp"
+        android:layout_y="646dp"
+        android:fontFamily="@font/andika"
+        android:onClick="stage2"
+        android:text="Guesstimate us"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="237dp"
+        android:layout_y="742dp"
+        android:fontFamily="@font/andika"
+        android:text="START"
+        android:textColor="#00E676"
+        android:onClick="Start_game"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="151dp"
+        android:layout_y="13dp"
+        android:fontFamily="@font/andika"
+        android:text="STOP"
+        android:textColor="#FF3D00"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/man_supercoincollector"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_x="24dp"
+        android:layout_y="648dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <ImageView
+        android:id="@+id/man_groupitright"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_x="22dp"
+        android:layout_y="518dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <ImageView
+        android:id="@+id/man_thealzheimerstimes"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_x="21dp"
+        android:layout_y="374dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <ImageView
+        android:id="@+id/man_MyJournal"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_x="12dp"
+        android:layout_y="26dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <ImageView
+        android:id="@+id/man_start"
+        android:layout_width="59dp"
+        android:layout_height="44dp"
+        android:layout_x="72dp"
+        android:layout_y="734dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <ImageView
+        android:id="@+id/man_DoughnutvsDoughnut"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_x="24dp"
+        android:layout_y="267dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <ImageView
+        android:id="@+id/man_Talktillyoudrop"
+        android:layout_width="86dp"
+        android:layout_height="68dp"
+        android:layout_x="22dp"
+        android:layout_y="143dp"
+        app:srcCompat="@drawable/unc1" />
+
+    <TextView
+        android:id="@+id/youarehere_groupitright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="75dp"
+        android:layout_y="513dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="104dp"
+        android:layout_y="745dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_thealzheimerstimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="73dp"
+        android:layout_y="374dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_Talktillyoudrop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="75dp"
+        android:layout_y="144dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_DoughnutvsDoughnut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="75dp"
+        android:layout_y="265dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_supercoincollector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="77dp"
+        android:layout_y="645dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_guestimate_us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="243dp"
+        android:layout_y="577dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_burstthemathout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="258dp"
+        android:layout_y="440dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_MysteryRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="249dp"
+        android:layout_y="205dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_CaterpillarAdventures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="259dp"
+        android:layout_y="332dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <TextView
+        android:id="@+id/youarehere_EideticEvocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="241dp"
+        android:layout_y="80dp"
+        android:fontFamily="@font/andika"
+        android:text="You are here !"
+        android:textColor="#FF3D00" />
+
+    <ImageView
+        android:id="@+id/man_guestimate_us"
+        android:layout_width="68dp"
+        android:layout_height="79dp"
+        android:layout_x="305dp"
+        android:layout_y="574dp"
+        app:srcCompat="@drawable/unc2" />
+
+    <ImageView
+        android:id="@+id/man_burstthemathout"
+        android:layout_width="68dp"
+        android:layout_height="79dp"
+        android:layout_x="329dp"
+        android:layout_y="436dp"
+        app:srcCompat="@drawable/unc2" />
+
+    <ImageView
+        android:id="@+id/man_EideticEvocation"
+        android:layout_width="68dp"
+        android:layout_height="79dp"
+        android:layout_x="311dp"
+        android:layout_y="77dp"
+        app:srcCompat="@drawable/unc2" />
+
+    <ImageView
+        android:id="@+id/man_CaterpillarAdventures"
+        android:layout_width="68dp"
+        android:layout_height="79dp"
+        android:layout_x="328dp"
+        android:layout_y="325dp"
+        app:srcCompat="@drawable/unc2" />
+
+    <ImageView
+        android:id="@+id/man_MysteryRoom"
+        android:layout_width="68dp"
+        android:layout_height="79dp"
+        android:layout_x="312dp"
+        android:layout_y="201dp"
+        app:srcCompat="@drawable/unc2" />
+
+</AbsoluteLayout>

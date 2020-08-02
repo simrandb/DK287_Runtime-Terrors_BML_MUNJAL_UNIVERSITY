@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E6FB9A"
+    android:id="@+id/Visuoperception"
+    tools:context=".Visuoperception">
+
+    <CheckBox
+        android:id="@+id/catbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="282dp"
+        android:layout_y="611dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt11"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/nobox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="281dp"
+        android:layout_y="501dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt9"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/pagesbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="31dp"
+        android:layout_y="557dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt2"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/orbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="282dp"
+        android:layout_y="556dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt10"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/wordsbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="148dp"
+        android:layout_y="669dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt8"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/manbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="150dp"
+        android:layout_y="611dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt7"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/dogbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="557dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt6"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/novelbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="33dp"
+        android:layout_y="671dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt4"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/notbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="33dp"
+        android:layout_y="506dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/readbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="152dp"
+        android:layout_y="502dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt5"
+        android:checked="false"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="483dp"
+        android:layout_height="316dp"
+        android:layout_x="-40dp"
+        android:layout_y="110dp"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="45dp"
+        android:layout_y="93dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/VisuoperceptionSt1"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_x="44dp"
+        android:layout_y="457dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/VisuoperceptionSt2"
+        android:textStyle="bold" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="289dp"
+        android:id="@+id/eyesgif"
+        android:layout_height="114dp"
+        android:layout_x="73dp"
+        android:layout_y="-6dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="59dp"
+        android:layout_height="35dp"
+        android:layout_x="322dp"
+        android:layout_y="89dp"
+        android:src="@drawable/below" />
+
+    <CheckBox
+        android:id="@+id/treebox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="33dp"
+        android:layout_y="613dp"
+        android:fontFamily="casual"
+        android:text="@string/Visuoperception_opt3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <CheckBox
+        android:id="@+id/bookbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="283dp"
+        android:layout_y="669dp"
+        android:fontFamily="casual"
+        android:text="opt12"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/go"
+        android:layout_width="39dp"
+        android:layout_height="25dp"
+        android:layout_x="364dp"
+        android:layout_y="676dp"
+
+        android:text="Button" />
+</AbsoluteLayout>

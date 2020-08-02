@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Fluency"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="5dp"
+    tools:context=".Fluency"
+    android:background="#F4C31D">
+
+
+    <TextView
+        android:id="@+id/timerclock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="55sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000"
+        android:text="1:00"/>
+
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_marginTop="10dp"
+         android:layout_weight="0.9">
+
+         <ListView
+             android:id="@+id/list_msg_blue"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="@dimen/activity_horizontal_margin"
+             android:divider="@null"
+             android:listSelector="@android:color/transparent"
+             android:transcriptMode="alwaysScroll"
+             />
+
+     </LinearLayout> !-->
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/chat"
+        android:orientation="vertical"
+        android:paddingBottom="1dp"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:id="@+id/txt_msg1"
+            android:fontFamily="casual"
+            android:text="@string/blueCloudText1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:maxWidth="270dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/chat"
+        android:orientation="vertical"
+        android:paddingBottom="1dp">
+
+        <TextView
+            android:id="@+id/txt_msg2"
+            android:fontFamily="casual"
+            android:text="@string/blueCloudText2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="15sp"
+            android:maxWidth="270dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp"
+            android:paddingRight="10dp"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5">
+
+        <ListView
+            android:id="@+id/list_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:transcriptMode="alwaysScroll"
+            />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/processing"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@drawable/typing" />
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/micText"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="casual"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/buttonText1"
+            />
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center">
+
+            <ImageButton
+                android:id="@+id/micbtn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:background="#F4C31D"
+                android:visibility="visible"/>
+            <ImageView
+                android:id="@+id/mic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/mic"
+                android:visibility="visible"/>
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/loading"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/loading"
+                android:visibility="invisible"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".Login">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="211dp"
+        android:layout_x="2dp"
+        android:layout_y="0dp"
+        app:srcCompat="@drawable/strip" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="397dp"
+        android:layout_height="162dp"
+        android:layout_x="8dp"
+        android:layout_y="608dp"
+        app:srcCompat="@drawable/newlogo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="506dp"
+        android:layout_height="wrap_content"
+        android:layout_x="14dp"
+        android:layout_y="18dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/info"
+        android:textColor="#AAA6A6"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_x="148dp"
+        android:layout_y="290dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/memberlogin"
+        android:textColor="#939292"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/loginusername"
+        android:layout_width="209dp"
+        android:layout_height="57dp"
+        android:layout_x="116dp"
+        android:layout_y="316dp"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/username"
+        android:inputType="textEmailAddress"
+        android:textColor="#8C8A8A"
+        android:textSize="18sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/hidepassword"
+        android:layout_height="wrap_content"
+        android:layout_x="118dp"
+        android:layout_y="383dp"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/blue"
+
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/loginphonepassword"
+            android:layout_width="211dp"
+            android:layout_height="50dp"
+            android:hint="@string/pass"
+            android:inputType="textPassword"></EditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/forgotp"
+        android:layout_width="133dp"
+        android:layout_height="wrap_content"
+        android:layout_x="232dp"
+        android:layout_y="448dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/forgot"
+        android:textColor="#62E3F3" />
+
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="110dp"
+        android:layout_y="580dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/signup"
+        android:textColor="#9A9898" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="422dp"
+        android:layout_height="wrap_content"
+        android:layout_x="51dp"
+        android:layout_y="213dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/login_now"
+        android:textColor="#FF9100"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_x="83dp"
+        android:layout_y="336dp"
+        app:srcCompat="@drawable/username" />
+
+    <ImageView
+        android:id="@+id/tootpimage"
+        android:layout_width="40dp"
+        android:layout_height="29dp"
+        android:layout_x="74dp"
+        android:layout_y="406dp"
+        app:srcCompat="@drawable/password" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="73dp"
+        android:layout_height="48dp"
+        android:layout_x="173dp"
+        android:layout_y="234dp"
+        app:srcCompat="@drawable/images" />
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="182dp"
+        android:layout_height="35dp"
+        android:layout_x="115dp"
+        android:layout_y="516dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="sans-serif-condensed"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FDB556"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/loginimage"
+        android:layout_width="250dp"
+        android:layout_height="146dp"
+        android:layout_x="158dp"
+        android:layout_y="63dp"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/changelang"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_x="110dp"
+        android:layout_y="560dp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-black"
+        android:text="change lang"
+        android:textColor="#9A9898" />
+
+</AbsoluteLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:id="@+id/Option_Screen"
+    tools:context=".Option_Screen">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:text="PLAY  GAME"
+        android:textColor="#807B7B"
+        android:textSize="44sp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="261dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/textView13"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/option_button"
+        android:text="Visually Paired"
+        android:textAllCaps="false"
+        android:onClick="Start_Vp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="261dp"
+        android:layout_height="62dp"
+        android:layout_below="@id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/option_button"
+        android:text="Visually Impaired"
+        android:textAllCaps="false"
+        android:onClick="Start_Vi"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView13"
+        android:layout_centerHorizontal="true"
+        android:text="for"
+        android:textColor="#807B7B"
+        android:textSize="30sp"
+        app:fontFamily="@font/calligraffitti" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/imageView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50sp"
+        android:text="based on"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="193dp"
+        android:layout_height="173dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="18dp"
+        app:srcCompat="@drawable/moca" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="220dp"
+        android:layout_height="146dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-2dp"
+        android:layout_marginBottom="7dp"
+        app:srcCompat="@drawable/sage" />
+
+</RelativeLayout>

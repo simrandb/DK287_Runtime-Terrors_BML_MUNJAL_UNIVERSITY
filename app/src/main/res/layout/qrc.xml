@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".QRC">
+
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="169dp"
+        android:layout_height="158dp"
+        android:layout_x="266dp"
+        android:layout_y="647dp"
+        app:srcCompat="@drawable/result" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="147dp"
+        android:layout_height="244dp"
+        android:layout_x="139dp"
+        android:layout_y="579dp"
+        app:srcCompat="@drawable/doctorqrc" />
+
+    <Button
+        android:id="@+id/gotoresultpage"
+        android:layout_width="182dp"
+        android:layout_height="35dp"
+        android:layout_x="121dp"
+        android:layout_y="463dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Exit"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#FDB556"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="207dp"
+        android:layout_height="190dp"
+        android:layout_x="2dp"
+        android:layout_y="658dp"
+        app:srcCompat="@drawable/phoneqrc" />
+
+    <ImageView
+        android:id="@+id/showhereqrc"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_x="97dp"
+        android:layout_y="50dp"
+        app:srcCompat="@drawable/qrcode" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="354dp"
+        android:layout_height="148dp"
+        android:layout_x="32dp"
+        android:layout_y="295dp"
+        android:fontFamily="monospace"
+        android:text="By showing a QR Code your doctor can instantly connect      to your scores by scanning     the QR Code."
+        android:textSize="18sp" />
+
+</AbsoluteLayout>

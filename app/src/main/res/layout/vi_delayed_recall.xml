@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="#fae68b28"
+    tools:context=".VI_Delayed_Recall">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/left"
+        android:layout_width="161dp"
+        android:layout_height="208dp"
+        android:layout_x="12dp"
+        android:layout_y="301dp"
+        android:rotation="90"
+        android:src="@drawable/swipe"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="252dp"
+        android:visibility="invisible"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/down"
+        android:layout_width="206dp"
+        android:layout_height="181dp"
+        android:layout_x="92dp"
+        android:layout_y="571dp"
+        android:src="@drawable/swipe"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="516dp"
+        android:visibility="invisible"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/up"
+        android:layout_width="206dp"
+        android:layout_height="181dp"
+        android:layout_x="100dp"
+        android:layout_y="88dp"
+        android:rotation="180"
+        android:src="@drawable/swipe"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="34dp"
+        android:visibility="invisible"/>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/right"
+        android:layout_width="161dp"
+        android:layout_height="208dp"
+        android:layout_x="235dp"
+        android:layout_y="301dp"
+        android:rotation="-90"
+        android:src="@drawable/swipe"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="252dp"
+        android:visibility="invisible"/>
+
+
+</AbsoluteLayout>

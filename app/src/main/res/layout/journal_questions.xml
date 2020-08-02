@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:id="@+id/JournalQuestions"
+    tools:context=".JournalQuestions">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mood3"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="21dp"
+        android:text="2. While carrying out my daily activities, I feel"
+        android:textColor="#5E5757"
+        android:textSize="18sp"
+        app:fontFamily="@font/andika" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="308dp"
+        android:layout_height="34dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/imageView"
+        android:text="Hey there ! Let's update your journal."
+        android:textColor="#0490BA"
+        android:textSize="16sp"
+        app:fontFamily="@font/amita" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/imageView"
+        android:text="My  Journal"
+        android:textColor="#4A1616"
+        android:textSize="26sp"
+        app:fontFamily="@font/amita" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="64dp"
+        android:layout_height="73dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/journal" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="342dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="1. This has been my mood lately."
+        android:textColor="#5E5757"
+        android:textSize="18sp"
+        app:fontFamily="@font/andika" />
+
+    <ImageButton
+        android:id="@+id/mood3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/mood2"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/neutral" />
+
+    <ImageButton
+        android:id="@+id/mood2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/mood1"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/smile" />
+
+    <ImageButton
+        android:id="@+id/mood1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/happy" />
+
+    <ImageButton
+        android:id="@+id/mood4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/mood3"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/irritability" />
+
+    <ImageButton
+        android:id="@+id/mood5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/textView3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/mood4"
+        android:background="#FFFFFF"
+        app:srcCompat="@drawable/anger" />
+
+    <RadioGroup
+        android:id="@+id/dailyactivities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        app:fontFamily="@font/andika">
+
+
+        <RadioButton
+            android:id="@+id/sedentary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Sedentary"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/lethargic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-30dp"
+            android:text="Lethargic"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/moderatelyactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-2dp"
+            android:text="Moderately Active"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/highlyactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-32dp"
+            android:text="Highly Active"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="74dp"
+        android:text="4. Whenever I'm working I feel"
+        android:textColor="#5E5757"
+        android:textSize="18sp"
+        app:fontFamily="@font/andika" />
+
+    <RadioGroup
+        android:id="@+id/sleepcycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView9"
+        android:layout_marginTop="0dp"
+        app:fontFamily="@font/andika">
+
+        <RadioButton
+            android:id="@+id/regularsleep"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:text="Regular"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/irregularsleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-32dp"
+            android:layout_marginRight="40dp"
+            android:layout_toRightOf="@id/regularsleep"
+            android:text="Irregular"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/cantsay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="-32dp"
+            android:text="Can't Say"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="393dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="207dp"
+        android:text="6. I would rate my relationship with others as"
+        android:textColor="#5E5757"
+        android:textSize="18sp"
+        app:fontFamily="@font/andika" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="25dp"
+        android:text="Poor"
+        android:textColor="#F8EF49"
+        android:textSize="14sp"
+        app:fontFamily="@font/andika" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_alignRight="@id/ratingBar"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="-60dp"
+        android:text="Excellent"
+        android:textColor="#F8EF49"
+        android:textSize="14sp"
+        app:fontFamily="@font/andika" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="208dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/buttonsubmit"
+        android:text="Submit"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="42dp"
+        android:text="3. My sleep cycle is"
+        android:textColor="#5E5757"
+        android:textSize="18sp"
+        app:fontFamily="@font/andika" />
+
+    <RadioGroup
+        android:id="@+id/working"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView5"
+        android:layout_marginTop="-2dp"
+        app:fontFamily="@font/andika">
+
+        <RadioButton
+            android:id="@+id/distractedwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Distracted"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/focusedwork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="250dp"
+            android:layout_marginTop="-32dp"
+            android:layout_marginRight="40dp"
+            android:text="Focused"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView9"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="44dp"
+        android:text="5. I experience body pain "
+        android:textColor="#5E5757"
+        android:textSize="18sp"
+        app:fontFamily="@font/andika" />
+
+    <RadioGroup
+        android:id="@+id/bodypain"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_below="@id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="11dp"
+        app:fontFamily="@font/andika">
+
+        <RadioButton
+            android:id="@+id/bodypainnever"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Never"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/bodypainsometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="-32dp"
+            android:layout_marginRight="40dp"
+            android:text="Sometimes"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/bodypainmostly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="-32dp"
+            android:text="Mostly"
+            android:textColor="#2297BC"
+            android:textSize="15sp" />
+
+    </RadioGroup>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_below="@id/textView6"
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="13dp" />
+
+</RelativeLayout>

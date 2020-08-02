@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".FamilyHistory"
+    android:id="@+id/parentView">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="427dp"
+        android:layout_height="137dp"
+        android:layout_x="0dp"
+        android:layout_y="-11dp"
+        app:srcCompat="@drawable/strip" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="25dp"
+        android:layout_y="81dp"
+        android:text=" Lifestyle Patterns , Family History and more..."
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="230dp"
+        android:layout_height="92dp"
+        android:layout_x="210dp"
+        android:layout_y="668dp"
+        android:textColor="#FF3D00"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/relativeyes"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="72dp"
+        android:layout_y="618dp"
+        android:background="#00E676"
+        android:text="Yes"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/relativeno"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_x="249dp"
+        android:layout_y="619dp"
+        android:background="#FF3D00"
+        android:text="No"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="397dp"
+        android:layout_height="48dp"
+        android:layout_x="23dp"
+        android:layout_y="126dp"
+        android:fontFamily="sans-serif-black"
+        android:text="1. Please select your level of  education"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:layout_x="23dp"
+        android:layout_y="559dp"
+        android:fontFamily="sans-serif-black"
+        android:text="4. Do you have a close relative who was/is diagnosed with Alzheimer's ?"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="355dp"
+        android:layout_height="48dp"
+        android:layout_x="22dp"
+        android:layout_y="375dp"
+        android:fontFamily="sans-serif-black"
+        android:text="3. Select your lifestyle patterns"
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="376dp"
+        android:layout_height="48dp"
+        android:layout_x="20dp"
+        android:layout_y="191dp"
+        android:fontFamily="sans-serif-black"
+        android:text="2.  Select medical conditions that you experience or  experienced  in the past                     "
+        android:textColor="#000"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/headinjury"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="257dp"
+        android:fontFamily="serif"
+        android:text="Head Injury"
+        android:textColor="#7E7E7E"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <CheckBox
+        android:id="@+id/cardiovasculardisease"
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_x="24dp"
+        android:layout_y="333dp"
+        android:fontFamily="serif"
+        android:text="Cardiovascular Disease"
+        android:textColor="#7E7E7E"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <CheckBox
+        android:id="@+id/downsyndrome"
+        android:layout_width="206dp"
+        android:layout_height="wrap_content"
+        android:layout_x="23dp"
+        android:layout_y="295dp"
+        android:fontFamily="serif"
+        android:text="Down's Syndrome"
+        android:textColor="#7E7E7E"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="34dp"
+        android:layout_y="414dp"
+        android:fontFamily="serif"
+        android:text="Smoking : "
+        android:textColor="#00B0FF"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="34dp"
+        android:layout_y="487dp"
+        android:fontFamily="serif"
+        android:text="Drinking :"
+        android:textColor="#00B0FF"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/savechanges"
+        android:layout_width="247dp"
+        android:layout_height="36dp"
+        android:layout_x="84dp"
+        android:layout_y="677dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Save Changes"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="46dp"
+        android:layout_height="31dp"
+        android:layout_x="133dp"
+        android:layout_y="480dp"
+        app:srcCompat="@drawable/alcohol" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="25dp"
+        android:layout_height="33dp"
+        android:layout_x="149dp"
+        android:layout_y="405dp"
+        app:srcCompat="@drawable/smoking" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="34dp"
+        android:layout_height="22dp"
+        android:layout_x="266dp"
+        android:layout_y="340dp"
+        app:srcCompat="@drawable/heart" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="33dp"
+        android:layout_height="30dp"
+        android:layout_x="158dp"
+        android:layout_y="262dp"
+        app:srcCompat="@drawable/brain" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="17dp"
+        android:layout_height="18dp"
+        android:layout_x="211dp"
+        android:layout_y="306dp"
+        app:srcCompat="@drawable/downsyndrome" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="75dp"
+        android:layout_height="65dp"
+        android:layout_x="172dp"
+        android:layout_y="19dp"
+        app:srcCompat="@drawable/lifestyle" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="392dp"
+        android:layout_height="wrap_content"
+        android:layout_x="44dp"
+        android:layout_y="239dp"
+        android:text="**Please note that you can select multiple medical conditions."
+        android:textColor="#FF3D00"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+
+    <RadioGroup
+        android:id="@+id/years"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_x="21dp"
+        android:layout_y="150dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/years12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 years             "
+            android:fontFamily="serif"
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"/>
+
+        <RadioButton
+            android:id="@+id/greaterthan12years"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">=12 years     "
+            android:fontFamily="serif"
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"/>
+
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/drinking"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_x="34dp"
+        android:layout_y="520dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/drinkingnever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Never    "
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/drinkingoften"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Often    "
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/drinkingsometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Sometimes   "
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/smoking"
+        android:layout_width="322dp"
+        android:layout_height="42dp"
+        android:layout_x="32dp"
+        android:layout_y="441dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/smokingnever"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Never    "
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/smokingoften"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Often    "
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+
+        <RadioButton
+            android:id="@+id/smokingsometimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="serif"
+            android:text="Sometimes   "
+            android:textColor="#7E7E7E"
+            android:textSize="16sp"
+            android:textStyle="bold|italic" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="272dp"
+        android:layout_y="646dp"
+        android:fontFamily="serif"
+        android:textColor="#7E7E7E"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        android:text="         " />
+
+    <TextView
+        android:id="@+id/yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="87dp"
+        android:layout_y="646dp"
+        android:fontFamily="serif"
+        android:textColor="#7E7E7E"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        android:text="         " />
+</AbsoluteLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".AskForJournal"
+    android:id="@+id/AskForJournal">
+
+    <Button
+        android:id="@+id/gotoresults"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView11"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@id/gotojournal"
+        android:background="@drawable/buttonsubmit"
+        android:text="No, show results"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="225dp"
+        android:layout_height="79dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="230dp"
+        android:layout_toRightOf="@id/journalb"
+        android:text="My  Journal"
+        android:textColor="#4A1616"
+        android:textSize="40sp"
+        app:fontFamily="@font/amita" />
+
+    <ImageView
+        android:id="@+id/journalb"
+        android:layout_width="125dp"
+        android:layout_height="159dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="180dp"
+        app:srcCompat="@drawable/journal" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="365dp"
+        android:layout_height="78dp"
+        android:layout_below="@id/textView2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="70dp"
+        android:lineSpacingExtra="8sp"
+        android:padding="5dp"
+        android:text="Answer few questions based on your lifestyle for better results. "
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#4F504C"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        app:fontFamily="@font/alice" />
+
+    <Button
+        android:id="@+id/gotojournal"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView11"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttonsubmit"
+        android:text="Yes, continue"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="Well done, Game  Completed !"
+        android:textColor="#53A0CF"
+        android:textSize="20sp"
+        app:fontFamily="@font/andika" />
+
+</RelativeLayout>
