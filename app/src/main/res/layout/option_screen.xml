@@ -13,10 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/almendra_sc"
         android:text="PLAY  GAME"
-        android:textColor="#807B7B"
-        android:textSize="44sp" />
+        android:textColor="#095FC8"
+        android:textSize="48sp" />
 
     <Button
         android:id="@+id/button4"
@@ -24,11 +25,12 @@
         android:layout_height="62dp"
         android:layout_below="@id/textView13"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/option_button"
+        android:backgroundTint="#418EE3"
+        android:onClick="Start_Vp"
         android:text="Visually Paired"
         android:textAllCaps="false"
-        android:onClick="Start_Vp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
@@ -41,9 +43,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/option_button"
+        android:backgroundTint="#418EE3"
+        android:onClick="Start_Vi"
         android:text="Visually Impaired"
         android:textAllCaps="false"
-        android:onClick="Start_Vi"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
@@ -54,10 +57,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textView13"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
         android:text="for"
         android:textColor="#807B7B"
         android:textSize="30sp"
-        app:fontFamily="@font/calligraffitti" />
+        app:fontFamily="@font/allan" />
 
     <TextView
         android:id="@+id/textView"
@@ -65,15 +69,18 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/imageView7"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50sp"
+        android:layout_marginBottom="40sp"
+        android:fontFamily="@font/amarante"
         android:text="based on"
-        android:textSize="18sp"
+        android:textSize="22sp"
         android:textStyle="bold|italic" />
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="193dp"
         android:layout_height="173dp"
         android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-5dp"
         android:layout_marginBottom="18dp"
         app:srcCompat="@drawable/moca" />
 
@@ -86,5 +93,16 @@
         android:layout_marginRight="-2dp"
         android:layout_marginBottom="7dp"
         app:srcCompat="@drawable/sage" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="165dp"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/acme"
+        android:text="and"
+        android:textSize="18sp" />
 
 </RelativeLayout>

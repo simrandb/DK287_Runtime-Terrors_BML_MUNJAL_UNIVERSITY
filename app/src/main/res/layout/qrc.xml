@@ -21,13 +21,13 @@
         android:layout_width="147dp"
         android:layout_height="244dp"
         android:layout_x="139dp"
-        android:layout_y="579dp"
+        android:layout_y="533dp"
         app:srcCompat="@drawable/doctorqrc" />
 
     <Button
         android:id="@+id/gotoresultpage"
-        android:layout_width="182dp"
-        android:layout_height="35dp"
+        android:layout_width="191dp"
+        android:layout_height="wrap_content"
         android:layout_x="121dp"
         android:layout_y="463dp"
         android:background="@drawable/roundbutton"
@@ -63,6 +63,7 @@
         android:layout_y="295dp"
         android:fontFamily="monospace"
         android:text="By showing a QR Code your doctor can instantly connect      to your scores by scanning     the QR Code."
+        android:textAlignment="center"
         android:textSize="18sp" />
 
 </AbsoluteLayout>

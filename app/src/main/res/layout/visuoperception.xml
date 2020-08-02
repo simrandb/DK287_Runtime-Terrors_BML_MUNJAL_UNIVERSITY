@@ -180,16 +180,17 @@
         android:layout_x="283dp"
         android:layout_y="669dp"
         android:fontFamily="casual"
-        android:text="opt12"
+        android:text="book"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/go"
-        android:layout_width="39dp"
-        android:layout_height="25dp"
-        android:layout_x="364dp"
-        android:layout_y="676dp"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_x="127dp"
+        android:layout_y="716dp"
 
-        android:text="Button" />
+        android:background="#CDBBBB"
+        android:text="Submit" />
 </AbsoluteLayout>

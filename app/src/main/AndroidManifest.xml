@@ -56,6 +56,7 @@
         <activity android:name=".FamilyHistory" />
         <activity android:name=".ForgotPassword" />
         <activity android:name=".Option_Screen" />
+        <activity android:name=".NearbyDoctors"/>
         <activity android:name=".Roadmap" />
 
 

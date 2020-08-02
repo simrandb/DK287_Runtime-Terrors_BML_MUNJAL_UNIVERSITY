@@ -12,10 +12,12 @@
 
     <ImageView
         android:id="@+id/donutstand"
-        android:layout_width="383dp"
-        android:layout_height="869dp"
+        android:layout_width="398dp"
+        android:layout_height="880dp"
         android:layout_x="2dp"
-        android:layout_y="25dp" />
+        android:layout_y="14dp"
+        android:src="@drawable/doughnutstand"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/instruction1"
@@ -87,23 +89,23 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="265dp"
+        android:layout_width="261dp"
         android:layout_height="37dp"
-        android:layout_x="65dp"
-        android:layout_y="160dp"
+        android:layout_x="62dp"
+        android:layout_y="163dp"
         android:background="#AD9F059C" />
 
     <TextView
         android:id="@+id/textView"
         style="@android:style/Widget.Holo.TextView"
-        android:layout_width="253dp"
+        android:layout_width="267dp"
         android:layout_height="wrap_content"
-        android:layout_x="78dp"
-        android:layout_y="163dp"
+        android:layout_x="71dp"
+        android:layout_y="166dp"
         android:text="@string/attentionSt4"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="#FFFFFF"
-        android:textSize="24sp" />
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/instruction3"

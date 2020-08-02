@@ -48,6 +48,7 @@ public class Orientation extends AppCompatActivity {
     private int year, month, day;
     int score;
     int seconds=3;
+    String loc;
     String stage_name,username;
     public FirebaseAuth mAuth;
     DatabaseReference dbUsers;
@@ -55,14 +56,13 @@ public class Orientation extends AppCompatActivity {
     String uid;
     String description;
     OnSwipeTouchListener onSwipeTouchListener;
-    int progress;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.orientation);
 
         final DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("Users");
-        progress = 0;
 
         mAuth = FirebaseAuth.getInstance();
         fuser = mAuth.getCurrentUser();
@@ -99,6 +99,7 @@ public class Orientation extends AppCompatActivity {
             }
         });
 
+        loc = getAddress().trim();
         stage_name="Orientation";
         if(username==null)
         {
@@ -163,9 +164,6 @@ public class Orientation extends AppCompatActivity {
                 year = yyyy;
                 month = mm;
                 day = dd;
-                progress ++;
-                Toast.makeText(Orientation.this,Integer.toString(progress),Toast.LENGTH_LONG).show();
-                next_activity();
 
             }
         };
@@ -199,10 +197,7 @@ public class Orientation extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         dayTv.setText(popupSpinner.getSelectedItem().toString());
-                        progress ++;
-                        Toast.makeText(Orientation.this,Integer.toString(progress),Toast.LENGTH_LONG).show();
                         popupWindow.dismiss();
-                        next_activity();
                     }});
                 cancel.setOnClickListener(new Button.OnClickListener(){
                     @Override
@@ -242,10 +237,7 @@ public class Orientation extends AppCompatActivity {
                     public void onClick(View v) {
                         stateTv.setText(popupSpinner.getSelectedItem().toString());
                         popupWindow.dismiss();
-                        progress++;
-                        Toast.makeText(Orientation.this,Integer.toString(progress),Toast.LENGTH_LONG).show();
                         stateSet[0] = true;
-                        next_activity();
                     }});
                 cancel.setOnClickListener(new Button.OnClickListener(){
                     @Override
@@ -295,10 +287,7 @@ public class Orientation extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             cityTv.setText(popupSpinner.getSelectedItem().toString());
-                            progress ++;
-                            Toast.makeText(Orientation.this,Integer.toString(progress),Toast.LENGTH_LONG).show();
                             popupWindow.dismiss();
-                            next_activity();
                         }
                     });
                     cancel.setOnClickListener(new Button.OnClickListener() {
@@ -313,22 +302,29 @@ public class Orientation extends AppCompatActivity {
             }
         });
 
+        Button publish = findViewById(R.id.publish);
+        publish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                next_activity();
+            }
+        });
+
     }
 
     private void next_activity() {
-        if(progress >= 4)
-        {
-            calculateScore();
-            fuser = mAuth.getCurrentUser();
-            uid=fuser.getUid();
-            dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
-            dbUsers.child("orientation").setValue(score);
-            Popup_aftergame panel = new Popup_aftergame();
-            panel.showPopUp(Orientation.this, stage_name);
-            /*
-            Intent i=new Intent(getApplicationContext(), ImmediateRecall_Intro.class);
-            startActivity(i);*/
-        }
+
+        calculateScore();
+        fuser = mAuth.getCurrentUser();
+        uid=fuser.getUid();
+        dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
+        dbUsers.child("orientation").setValue(score);
+        Popup_aftergame panel = new Popup_aftergame();
+        panel.showPopUp(Orientation.this, stage_name);
+
+        Intent i=new Intent(getApplicationContext(), ImmediateRecall_Intro.class);
+        startActivity(i);
+
 
     }
 
@@ -350,15 +346,24 @@ public class Orientation extends AppCompatActivity {
         if(dayOfWeek.getText().toString().equalsIgnoreCase(week[cal.get(Calendar.DAY_OF_WEEK) - 1]))
             score++;
 
-        String address[] = getAddress().split(" ");
 
-        TextView state = findViewById(R.id.textView34);
-        if(address[1].equalsIgnoreCase(state.getText().toString()))
-            score++;
+        String address[];
+        if(loc.length() == 0){
+            address = (getAddress().split(" "));
+        }else{
+            address = loc.split(" ");
+        }
+        if(address.length >= 3) {
+            TextView state = findViewById(R.id.textView34);
+            if(address[1].equalsIgnoreCase(state.getText().toString()))
+                score++;
 
-        TextView city = findViewById(R.id.textView29);
-        if(address[0].equalsIgnoreCase(city.getText().toString()))
-            score++;
+            TextView city = findViewById(R.id.textView29);
+            if(address[0].equalsIgnoreCase(city.getText().toString()))
+                score++;
+        }
+        Toast.makeText(this,Integer.toString(score),Toast.LENGTH_LONG).show();
+
 
     }
 

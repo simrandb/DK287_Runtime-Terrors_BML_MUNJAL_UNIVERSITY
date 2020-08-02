@@ -245,7 +245,7 @@ int num;
         final View right = findViewById(R.id.right);
         down.setVisibility(View.GONE);
         right.setVisibility(View.VISIBLE);
-        speak(getString(R.string.Swipeleft).concat(answer.get(question_number)[2]),0,0,0,1,0,0,0);
+        speak(getString(R.string.Swiperight).concat(answer.get(question_number)[2]),0,0,0,1,0,0,0);
 
 
     }

@@ -15,6 +15,7 @@
         android:layout_x="8dp"
         android:layout_y="6dp"
         android:fontFamily="@font/andika"
+        android:onClick="askforjournal"
         android:text="You are here !"
         android:textColor="#FF3D00" />
 

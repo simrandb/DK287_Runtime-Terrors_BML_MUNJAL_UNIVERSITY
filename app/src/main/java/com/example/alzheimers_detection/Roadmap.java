@@ -37,6 +37,8 @@ public class Roadmap extends AppCompatActivity {
         stage9=findViewById(R.id.Talktillyoudrop);
         stage10=findViewById(R.id.EideticEvocation);
 
+
+
         inst_start=findViewById(R.id.youarehere_start);
         inst_myjournal=findViewById(R.id.youarehere_MyJournal);
         inst_stage1=findViewById(R.id.youarehere_supercoincollector);
@@ -63,6 +65,8 @@ public class Roadmap extends AppCompatActivity {
         man_stage9=findViewById(R.id.man_Talktillyoudrop);
         man_stage10=findViewById(R.id.man_EideticEvocation);
 
+        inst_myjournal.setVisibility(View.GONE);
+        man_myjournal.setVisibility(View.GONE);
 
         start.setClickable(false);
         myjournal.setClickable(false);
@@ -174,9 +178,9 @@ public class Roadmap extends AppCompatActivity {
             }
             else if(stage_name.contains("DelayedRecall"))
             {
-                stage10.setClickable(true);
-                man_stage10.setVisibility(View.VISIBLE);
-                inst_stage2.setVisibility(View.VISIBLE);
+                myjournal.setClickable(true);
+                inst_myjournal.setVisibility(View.VISIBLE);
+                man_myjournal.setVisibility(View.VISIBLE);
 
             }
         }
@@ -241,6 +245,11 @@ public class Roadmap extends AppCompatActivity {
     }
 
     public void results(View view) {
+        Intent i=new Intent(getApplicationContext(),AskForJournal.class);
+        startActivity(i);
+    }
+
+    public void askforjournal(View view) {
         Intent i=new Intent(getApplicationContext(),AskForJournal.class);
         startActivity(i);
     }

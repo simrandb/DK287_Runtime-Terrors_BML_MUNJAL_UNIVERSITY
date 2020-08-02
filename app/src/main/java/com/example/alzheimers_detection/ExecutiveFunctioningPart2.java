@@ -1,5 +1,3 @@
-
-
 //added images to firebase
 package com.example.alzheimers_detection;
 
@@ -198,6 +196,29 @@ public class ExecutiveFunctioningPart2 extends AppCompatActivity {
         uid=fuser.getUid();
         dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
         dbUsers.child("executiveFunctioning").setValue(score);
+        dbUsers.child("attention").setValue(0);
+        dbUsers.child("abstraction").setValue(0);
+        dbUsers.child("immediateRecall").setValue(0);
+        dbUsers.child("delayedRecall").setValue(0);
+        dbUsers.child("calculation").setValue(0);
+        dbUsers.child("orientation").setValue(0);
+        dbUsers.child("visuoperception").setValue(0);
+        dbUsers.child("fluency").setValue(0);
+        dbUsers.child("naming").setValue(0);
+
+        dbUsers.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e("UserListActivity", "Error occured");
+            }
+
+
+        });
         Popup_aftergame panel = new Popup_aftergame();
         panel.showPopUp(ExecutiveFunctioningPart2.this, stage_name);
     }

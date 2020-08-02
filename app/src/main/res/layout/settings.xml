@@ -180,7 +180,6 @@
         android:layout_x="167dp"
         android:layout_y="452dp"
         android:fontFamily="sans-serif-condensed"
-        android:hint="stutidhasmana@icloud.com"
         android:inputType="textEmailAddress" />
 
     <EditText

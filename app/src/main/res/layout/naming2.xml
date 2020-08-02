@@ -184,6 +184,7 @@
 
         android:layout_marginTop="138dp"
         android:layout_x="241dp"
-        android:layout_y="655dp" />
+        android:layout_y="655dp"
+        android:visibility="invisible" />
 
 </AbsoluteLayout>

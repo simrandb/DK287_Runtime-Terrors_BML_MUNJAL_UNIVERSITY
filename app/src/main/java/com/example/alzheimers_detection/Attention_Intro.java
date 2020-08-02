@@ -31,7 +31,7 @@ ProgressBar  progressBar2;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
 
-        attentionview=findViewById(R.id.attentionview);
+        /*attentionview=findViewById(R.id.attentionview);
         urlattentionview="https://firebasestorage.googleapis.com/v0/b/alzheimers-detection.appspot.com/o/stage7.gif?alt=media&token=62df8530-60c8-4583-b2e5-d881b66b7db5";
         //Picasso.with(this).load(urlattentionview).into(attentionview);
         Glide.with(this)
@@ -48,7 +48,7 @@ ProgressBar  progressBar2;
                 return false;
             }
         }).into(attentionview);
-
+*/
         nextfromattention=findViewById(R.id.nextfromattention);
         nextfromattention.setOnClickListener(new View.OnClickListener() {
             @Override

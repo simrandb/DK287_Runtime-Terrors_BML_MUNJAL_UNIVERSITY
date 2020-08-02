@@ -307,6 +307,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="138dp"
         android:layout_x="174dp"
-        android:layout_y="571dp" />
+        android:layout_y="571dp"
+        android:visibility="invisible" />
 
 </AbsoluteLayout>

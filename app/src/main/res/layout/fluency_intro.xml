@@ -92,13 +92,13 @@
         app:srcCompat="@drawable/stage9back" />
 
     <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/mic_gif"
         android:id="@+id/fluencyview"
         android:layout_width="306dp"
         android:layout_height="224dp"
         android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="0dp"
-        android:background="@mipmap/ic_launcher"
         android:scaleType="fitXY" />
 
 </RelativeLayout>

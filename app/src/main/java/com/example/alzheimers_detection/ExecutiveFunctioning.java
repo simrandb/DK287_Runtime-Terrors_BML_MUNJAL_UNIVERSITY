@@ -74,63 +74,54 @@ public class ExecutiveFunctioning extends AppCompatActivity {
         getSupportActionBar().hide();
         mysong = MediaPlayer.create(ExecutiveFunctioning.this, R.raw.summer);
         mysong.start();
-                     final ImageView image = findViewById(R.id.nature);
-                    final Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom);
-                    //please try adding a delay of 2 second here before start of animation
+        final ImageView image = findViewById(R.id.nature);
+        final Animation animation1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.zoom);
+        //please try adding a delay of 2 second here before start of animation
 
-                    new Handler().postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            image.startAnimation(animation1);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                image.startAnimation(animation1);
 
-                            new Handler().postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    //change_activity(Play);
-                                    fuser = mAuth.getCurrentUser();
-                                    uid=fuser.getUid();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //change_activity(Play);
+                        fuser = mAuth.getCurrentUser();
+                        uid=fuser.getUid();
 
-                                    final DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("Users");
+                        final DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("Users");
 
-                                    FirebaseUser fuser;
-                                    mAuth = FirebaseAuth.getInstance();
-                                    fuser = mAuth.getCurrentUser();
-                                    uid=fuser.getUid();
-                                    userDBRef.addValueEventListener(new ValueEventListener() {
-                                        @Override
-                                        public void onDataChange(DataSnapshot dataSnapshot) {
-                                            User user = dataSnapshot.child(uid).getValue(User.class);
-                                            num=user.getNumOfScores();
-                                            num++;
-                                            userDBRef.child("numOfScores").setValue(num);
-                                            userDBRef.child("calculation").setValue(0);
-                                            userDBRef.child("attention").setValue(0);
-                                            userDBRef.child("abstraction").setValue(0);
-                                            userDBRef.child("delayedRecall").setValue(0);
-                                            userDBRef.child("visuoperception").setValue(0);
-                                            userDBRef.child("naming").setValue(0);
-                                            userDBRef.child("orientation").setValue(0);
-                                            userDBRef.child("executiveFunctioning").setValue(0);
-                                            userDBRef.child("fluency").setValue(0);
-                                            userDBRef.child("immediateRecall").setValue(0);
-                                        }
-
-                                        @Override
-                                        public void onCancelled(@NonNull DatabaseError databaseError) {
-                                            Log.e("UserListActivity", "Error occured");
-                                        }
+                        FirebaseUser fuser;
+                        mAuth = FirebaseAuth.getInstance();
+                        fuser = mAuth.getCurrentUser();
+                        uid=fuser.getUid();
+                        userDBRef.addValueEventListener(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(DataSnapshot dataSnapshot) {
+                                User user = dataSnapshot.child(uid).getValue(User.class);
+                                int num=user.getNumOfScores();
+                                num++;
 
 
-                                    });
+                            }
 
-                                    final Intent mainIntent = new Intent(ExecutiveFunctioning.this, ExecutiveFunctioningPart2.class);
-                                    startActivity(mainIntent);
-                                    ExecutiveFunctioning.this.finish();
-                                }
-                            }, 5500);
-                        }
-                    }, 1500);
-                }
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+                                Log.e("UserListActivity", "Error occured");
+                            }
+
+
+                        });
+
+                        final Intent mainIntent = new Intent(ExecutiveFunctioning.this, ExecutiveFunctioningPart2.class);
+                        startActivity(mainIntent);
+                        ExecutiveFunctioning.this.finish();
+                    }
+                }, 5500);
+            }
+        }, 1500);
+    }
 
 
     @Override

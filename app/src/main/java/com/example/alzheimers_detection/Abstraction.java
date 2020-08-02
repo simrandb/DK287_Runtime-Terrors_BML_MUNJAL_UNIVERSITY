@@ -108,7 +108,7 @@ public class Abstraction extends AppCompatActivity {
         urlbucket="https://firebasestorage.googleapis.com/v0/b/alzheimers-detection.appspot.com/o/bucket.png?alt=media&token=f180f368-1ff8-431d-adad-c33b78ec5f05";
 
         Picasso.with(this).load(urlavocado).into(avocado);
-        Picasso.with(this).load(urlball).into(ball);
+        //Picasso.with(this).load(urlball).into(ball);
         Picasso.with(this).load(urlbucket).into(fruitsbucket);
         Picasso.with(this).load(urlbucket).into(instrumentsbucket);
         Picasso.with(this).load(urlbucket).into(sportsbucket);
@@ -120,11 +120,27 @@ public class Abstraction extends AppCompatActivity {
         Picasso.with(this).load(urllamo).into(chandlier1);
         Picasso.with(this).load(urllamo).into(chandlier2);
         Picasso.with(this).load(urllamo).into(chandlier3);
-        Picasso.with(this).load(urlpineapple).into(pineapple);
+        //Picasso.with(this).load(urlpineapple).into(pineapple);
         Picasso.with(this).load(urlsoccerball).into(soccerball);
-        Picasso.with(this).load(urltabla).into(tabla);
+        //Picasso.with(this).load(urltabla).into(tabla);
         Picasso.with(this).load(urltennis).into(tennis);
         Picasso.with(this).load(urltrumpet).into(trumpet);
+
+
+        int[] imagesFruits = new int[] {R.drawable.apple, R.drawable.pineapple};
+        int[] imagesInstruments = new int[] {R.drawable.harmonium, R.drawable.tabla};
+        int[] imagesSports = new int[] {R.drawable.tennis, R.drawable.volleyball};
+
+        int imageIdInstruments = (int)(Math.random() * imagesInstruments.length);
+        tabla.setBackgroundResource(imagesInstruments[imageIdInstruments]);
+
+        int imageIdSports = (int)(Math.random() * imagesSports.length);
+        ball.setBackgroundResource(imagesSports[imageIdSports]);
+
+        int imageIdFruits = (int)(Math.random() * imagesFruits.length);
+        pineapple.setBackgroundResource(imagesFruits[imageIdFruits]);
+
+
 
         fruitsb.setVisibility(View.INVISIBLE);
         sportsb.setVisibility(View.INVISIBLE);
@@ -135,18 +151,18 @@ public class Abstraction extends AppCompatActivity {
         Intent intent = getIntent();
         final String Play = intent.getStringExtra("Play");
 
-            new CountDownTimer(1000,1000){
+        new CountDownTimer(1000,1000){
 
-                @Override
-                public void onTick(long millisUntilFinished) {
-                }
+            @Override
+            public void onTick(long millisUntilFinished) {
+            }
 
-                @Override
-                public void onFinish() {
-                    PopUp_PlayGame p = new PopUp_PlayGame();
-                    p.showPopUp(Abstraction.this,description);
-                }
-            }.start();
+            @Override
+            public void onFinish() {
+                PopUp_PlayGame p = new PopUp_PlayGame();
+                p.showPopUp(Abstraction.this,description);
+            }
+        }.start();
 
 
         grapes.setOnTouchListener(onTouchListener());

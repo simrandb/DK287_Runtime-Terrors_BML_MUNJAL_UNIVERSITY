@@ -82,6 +82,7 @@
         app:fontFamily="@font/acme" />
 
     <pl.droidsonroids.gif.GifImageView
+        android:src="@drawable/attentionintro"
         android:id="@+id/attentionview"
         android:layout_width="match_parent"
         android:layout_height="282dp"
@@ -97,6 +98,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="138dp" />
+        android:layout_marginTop="138dp"
+        android:visibility="invisible" />
 
 </RelativeLayout>

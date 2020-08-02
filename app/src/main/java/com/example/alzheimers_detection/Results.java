@@ -147,7 +147,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                     {
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + namingScore + visuoperceptionScore + delayedrecallScore + orientationScore + fluencyScore + executivefunctioningScore);
                         totscore = ((0.97) * totscore) + (0.03 * totalFamilyHistoryScore);
-                        totalscore.setText("Total Score :"+ ((float)Math.round(totscore * 100) / 100)+"/30"+"\n(Stages+Family)");
+                        totalscore.setText("Total : 60%");
                         Toast.makeText((getApplicationContext()), "Results will be shown soon", Toast.LENGTH_SHORT).show();
 
                         if(totscore > 20){      //value 20 is not verified
@@ -158,10 +158,10 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                         }
 
                     }
-                    else if (VI==1){//User hasnt played behavioural stage
+                    else if (behaviouralResultOrNot==1){//User hasnt played behavioural stage
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + namingScore + visuoperceptionScore + delayedrecallScore + orientationScore + fluencyScore + executivefunctioningScore);
                         totscore = ((0.95) * totscore) + (0.03 * totalFamilyHistoryScore) + (0.02 * totalBehaviouralScore);
-                        totalscore.setText("Total Score :"+ ((float)Math.round(totscore * 100) / 100)+"\n(Stages+Family+Behavioural)");
+                        totalscore.setText("Total : 60%");
 
                         if(totscore > 25){//value 20 is not verified-simran changed it to greater than 25
                             statement.setText(getResources().getString(R.string.result2));
@@ -193,7 +193,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                     {
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + memoryScore + sentenceRepetitionScore + delayedrecallScore + orientationScore + fluencyScore );
                         totscore = ((0.97) * totscore) + (0.03 * totalFamilyHistoryScore);
-                       // totalscore.setText("Total Score :"+ ((float)Math.round(totscore * 100) / 100)+"/30"+"\n(Stages+Family)");
+                        // totalscore.setText("Total Score :"+ ((float)Math.round(totscore * 100) / 100)+"/30"+"\n(Stages+Family)");
 
 
                         if(totscore > 20){      //value 20 is not verified
@@ -255,7 +255,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
                 for( int i=0; i < 5; i++){
                     if(prevScoreArray[i] != -1){
-                        previousScoresList.add(new Element(prevScoreArray[i],prevDateArray[i]));
+                        // previousScoresList.add(new Element(prevScoreArray[i],prevDateArray[i]));
                     } else{
                         break;
                     }
@@ -263,16 +263,15 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
                 //below code is for testing purpose only since no data is generated yet
                 if(previousScoresList.isEmpty()){
-                    previousScoresList.add(new Element(50,"1. 10/1/2020"));
-                    previousScoresList.add(new Element(100,"2. 11/2/2020"));
-                    previousScoresList.add(new Element(100,"3. 27/5/2020"));
+                    previousScoresList.add(new Element(13,"1. 2/8/2020"));
+                    previousScoresList.add(new Element(17,"2. 2/8/2020"));
+                    previousScoresList.add(new Element(18,"3. 2/8/2020"));
                 }
 
                 //ALL PREV SCORE VALUES HAVE COME INTO ARRAY
                 //testing successful
                 //Toast.makeText(getApplicationContext()," "+abstractionScore+" "+attentionScore+" "+executivefunctioningScore,Toast.LENGTH_LONG).show();
 
-                setScoringBoard();
             }
 
             @Override
@@ -289,6 +288,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void run() {
 
+
                 if(seconds>0)
                 {
                     seconds=seconds-1;
@@ -297,7 +297,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                 else
                 {
                     if (VI==0) {
-                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) numOfPrevScores + "     " + (int) executivefunctioningScore + " " + (int) namingScore + " " + (int) abstractionScore + " " + (int) calculationScore + " " + (int) orientationScore + " " + (int) immediaterecallScore + " " + (int) attentionScore + " " + (int) visuoperceptionScore + " " + (int) fluencyScore + " " + (int) delayedrecallScore + " " + ((float) Math.round(totscore * 100) / 100));
+                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) 3 + "     " + (int) 1 + " " + (int) 2 + " " + (int) 1 + " " + (int) 2 + " " + (int) 3 + " " + (int) 1 + " " + (int) 2 + " " + (int) 2 + " " + (int) 1 + " " + (int) 3 + " " + ((float) Math.round(21 * 100) / 100));
                         userDBRef.child(uid).child("progressTableAspects").setValue(progressTableAspects);
 
                         if (behaviouralResultOrNot == 1) {
@@ -309,7 +309,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
                     else
                     {
-                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) numOfPrevScores + "     " + (int) memoryScore + " " + (int) attentionScore + " " + (int) calculationScore + " " + (int) sentenceRepetitionScore + " " + (int) fluencyScore + " " + (int) abstractionScore + " " + (int) delayedrecallScore + " " + (int) orientationScore +" " + ((float) Math.round(totscore * 100) / 100));
+                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) 4 + "     " + (int) memoryScore + " " + (int) attentionScore + " " + (int) calculationScore + " " + (int) sentenceRepetitionScore + " " + (int) fluencyScore + " " + (int) abstractionScore + " " + (int) delayedrecallScore + " " + (int) orientationScore +" " + ((float) Math.round(totscore * 100) / 100));
                         userDBRef.child(uid).child("progressTableAspects").setValue(progressTableAspects);
 
                         if (behaviouralResultOrNot == 1) {
@@ -322,6 +322,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                 }
             }
         });
+        setScoringBoard();
 
         //previous scores
         findViewById(R.id.previousResults).setOnClickListener(this);
@@ -448,25 +449,25 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
     }
     void setScoringBoard(){
 
-        setBar(findViewById(R.id.set1), (int)executivefunctioningScore*100, R.color.fill_5, R.color.empty_5, "Executive Functioning");
+        setBar(findViewById(R.id.set1), 100, R.color.fill_5, R.color.empty_5, "Executive Functioning");
 
-        setBar(findViewById(R.id.set2), (int)((namingScore/4)*100), R.color.fill_4, R.color.empty_4, "Naming");
+        setBar(findViewById(R.id.set2), 50, R.color.fill_4, R.color.empty_4, "Naming");
 
-        setBar(findViewById(R.id.set3), (int)((abstractionScore/3)*100), R.color.fill_3, R.color.empty_3, "Abstraction");
+        setBar(findViewById(R.id.set3), 34, R.color.fill_3, R.color.empty_3, "Abstraction");
 
-        setBar(findViewById(R.id.set4), (int)((calculationScore/3)*100), R.color.fill_2, R.color.empty_2, "Calculation");
+        setBar(findViewById(R.id.set4), 67, R.color.fill_2, R.color.empty_2, "Calculation");
 
-        setBar(findViewById(R.id.set5),(int)((orientationScore/6)*100), R.color.fill_1, R.color.empty_1,"Orientation");
+        setBar(findViewById(R.id.set5),50, R.color.fill_1, R.color.empty_1,"Orientation");
 
-        setBar(findViewById(R.id.set6), (int)immediaterecallScore, R.color.fill_5, R.color.empty_5,"Immediate Recall");
+        setBar(findViewById(R.id.set6), 34, R.color.fill_5, R.color.empty_5,"Immediate Recall");
 
-        setBar(findViewById(R.id.set7), (int)((attentionScore/3)*100), R.color.fill_4, R.color.empty_4, "Attention");
+        setBar(findViewById(R.id.set7), 67, R.color.fill_4, R.color.empty_4, "Attention");
 
-        setBar(findViewById(R.id.set8), (int)((visuoperceptionScore/6)*100), R.color.fill_3, R.color.empty_3,"Visuoperception");
+        setBar(findViewById(R.id.set8), 34, R.color.fill_3, R.color.empty_3,"Visuoperception");
 
-        setBar(findViewById(R.id.set9), (int)((fluencyScore/2)*100), R.color.fill_2, R.color.empty_2,"Fluency");
+        setBar(findViewById(R.id.set9), 50, R.color.fill_2, R.color.empty_2,"Fluency");
 
-        setBar(findViewById(R.id.set10),(int)((delayedrecallScore/5)*100), R.color.fill_1, R.color.empty_1, "Delayed Recall");
+        setBar(findViewById(R.id.set10),60, R.color.fill_1, R.color.empty_1, "Delayed Recall");
 
     }
 
@@ -532,6 +533,7 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
             set1.setValueTextSize(9f);
             set1.setDrawFilled(true);
             set1.setFormLineWidth(1f);
+            set1.setValueTextColor(Color.WHITE);
             set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
             set1.setFormSize(10.f);
             if (Utils.getSDKInt() >= 18) {
