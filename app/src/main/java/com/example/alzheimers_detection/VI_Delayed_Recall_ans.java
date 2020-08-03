@@ -56,8 +56,6 @@ public class VI_Delayed_Recall_ans extends AppCompatActivity {
         myIntent.putExtra("Answer", out);
         myIntent.putExtra("Score", score);
         myIntent.putExtra("Decimal", decimal);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         mContext.startActivity(myIntent);
     }
 

@@ -18,7 +18,7 @@ public class VI_Start extends AppCompatActivity {
     //String currentLanguage = "en";
     int currLang;
     Spinner spinner ;
-   static int currentLang;
+    static int currentLang;
     Speak sp;
     private static Boolean done = false;
     @Override
@@ -41,8 +41,6 @@ public class VI_Start extends AppCompatActivity {
             {
                 if (done) {
                     Intent myIntent=new Intent(getApplicationContext(), VI_Memory_intro.class);
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(myIntent);
                 }
 

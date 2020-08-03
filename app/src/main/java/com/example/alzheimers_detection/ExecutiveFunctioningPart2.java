@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -28,11 +29,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.Calendar;
+
 public class ExecutiveFunctioningPart2 extends AppCompatActivity {
     ImageView coinsack,imageView1,imageView2,imageView3,imageView4,imageViewA,imageViewB,imageViewC,imageViewD;
     int count=0,seconds=1;
     String url1,url2,url3,url4,urla,urlb,urlc,urld,urlsack;
     public FirebaseAuth mAuth;
+    int num;
+    User user;
     DatabaseReference dbUsers;
     FirebaseUser fuser;
     OnSwipeTouchListener onSwipeTouchListener;
@@ -55,6 +60,7 @@ public class ExecutiveFunctioningPart2 extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         fuser = mAuth.getCurrentUser();
         uid=fuser.getUid();
+
         userDBRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -136,6 +142,7 @@ public class ExecutiveFunctioningPart2 extends AppCompatActivity {
         Picasso.with(this).load(urlc).into(imageViewC);
         Picasso.with(this).load(urld).into(imageViewD);*/
 
+
         new CountDownTimer(1000,1000){
 
             @Override
@@ -191,34 +198,61 @@ public class ExecutiveFunctioningPart2 extends AppCompatActivity {
         }
     }
 
-    private void change_activity(Context C, String stage_name) {
-        fuser = mAuth.getCurrentUser();
-        uid=fuser.getUid();
-        dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
-        dbUsers.child("executiveFunctioning").setValue(score);
-        dbUsers.child("attention").setValue(0);
-        dbUsers.child("abstraction").setValue(0);
-        dbUsers.child("immediateRecall").setValue(0);
-        dbUsers.child("delayedRecall").setValue(0);
-        dbUsers.child("calculation").setValue(0);
-        dbUsers.child("orientation").setValue(0);
-        dbUsers.child("visuoperception").setValue(0);
-        dbUsers.child("fluency").setValue(0);
-        dbUsers.child("naming").setValue(0);
 
-        dbUsers.addValueEventListener(new ValueEventListener() {
+    private void change_activity(Context C, String stage_name) {
+        dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
+
+        dbUsers.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                user = dataSnapshot.getValue(User.class);
+                num=user.getNumOfScores();
+
+
 
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("UserListActivity", "Error occured");
+
             }
-
-
         });
+        seconds=3;
+        final Handler handler=new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+
+                if(seconds>0)
+                {
+                    seconds=seconds-1;
+                    handler.postDelayed(this,1000);
+                }
+                else {
+                    fuser = mAuth.getCurrentUser();
+                    uid=fuser.getUid();
+                    dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
+                    dbUsers.child("executiveFunctioning").setValue(score);
+                    dbUsers.child("attention").setValue(0);
+                    dbUsers.child("abstraction").setValue(0);
+                    dbUsers.child("immediateRecall").setValue(0);
+                    dbUsers.child("delayedRecall").setValue(0);
+                    dbUsers.child("calculation").setValue(0);
+                    dbUsers.child("orientation").setValue(0);
+                    dbUsers.child("visuoperception").setValue(0);
+                    dbUsers.child("fluency").setValue(0);
+                    dbUsers.child("naming").setValue(0);
+                    num++;
+                    dbUsers.child("numOfScores").setValue(num);
+                    Log.d("num",""+num);
+
+
+                }
+
+            }
+        });
+
         Popup_aftergame panel = new Popup_aftergame();
         panel.showPopUp(ExecutiveFunctioningPart2.this, stage_name);
     }

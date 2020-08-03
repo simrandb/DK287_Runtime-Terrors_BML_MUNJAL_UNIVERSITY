@@ -163,8 +163,6 @@ public class VI_Abstraction extends AppCompatActivity {
         final Intent myIntent = new Intent(this, VI_Abstraction_ans.class);
         myIntent.putExtra("Que_no",que_no[question_number]);
         myIntent.putExtra("Score",Score_points[score]);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(myIntent);
     }
     void speak(String say, final int q,final int o1,final int o2,final int o3,final int o4,final int na){

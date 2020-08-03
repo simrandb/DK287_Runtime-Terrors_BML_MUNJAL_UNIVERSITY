@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class VI_Calculation_ans extends AppCompatActivity {
 
-   OnSwipeTouchListener onSwipeTouchListener;
+    OnSwipeTouchListener onSwipeTouchListener;
     private static Context mContext;
     static boolean got;
     @Override
@@ -54,8 +54,6 @@ public class VI_Calculation_ans extends AppCompatActivity {
         myIntent.putExtra("Quetion", que);
         myIntent.putExtra("Answer", out);
         myIntent.putExtra("Score", score);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         mContext.startActivity(myIntent);
     }
 

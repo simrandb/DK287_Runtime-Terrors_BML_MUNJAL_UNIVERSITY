@@ -35,8 +35,6 @@ public class VI_Memory_intro extends AppCompatActivity {
                 if(done3)
                 {
                     Intent myIntent=new Intent(getApplicationContext(),VI_Memory.class);
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(myIntent);
                     VI_Memory_intro.this.finish();
                 }

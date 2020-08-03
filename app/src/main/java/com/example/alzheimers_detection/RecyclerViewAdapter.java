@@ -50,7 +50,7 @@ class RecyclerViewAdapter extends
 
     // Usually involves inflating a layout from XML and returning the holder
     @Override
-    public RecyclerViewAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
 
@@ -64,7 +64,7 @@ class RecyclerViewAdapter extends
 
     // Involves populating data into the item through holder
     @Override
-    public void onBindViewHolder(RecyclerViewAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
         // Get the data model based on position
         Element element = scoreList.get(position);
 

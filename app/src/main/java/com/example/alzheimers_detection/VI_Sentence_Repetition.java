@@ -116,11 +116,11 @@ public class VI_Sentence_Repetition extends AppCompatActivity implements TextToS
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     private void function(){
-            done=0;
-            result.setText("");
-            sentence = selectSentence();
-            st.setText(sentence);
-            speakOut(sentence);
+        done=0;
+        result.setText("");
+        sentence = selectSentence();
+        st.setText(sentence);
+        speakOut(sentence);
     }
 
 
@@ -465,7 +465,7 @@ public class VI_Sentence_Repetition extends AppCompatActivity implements TextToS
             case REQUEST_RECORD_PERMISSION:
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //Toast.makeText(VI_Sentence_Repetition.this, "Permission Granted!", Toast
-                     //  .LENGTH_SHORT).show();
+                    //  .LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(VI_Sentence_Repetition.this, "Permission Denied!", Toast
                             .LENGTH_SHORT).show();
@@ -481,8 +481,6 @@ public class VI_Sentence_Repetition extends AppCompatActivity implements TextToS
         dbUsers.child("sentenceRepetition").setValue(score);
 
         Intent myIntent=new Intent(getApplicationContext(),VI_Verbal_fluency_intro.class);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(myIntent);
         if(tts != null){
             tts.stop();

@@ -1,12 +1,12 @@
 package com.example.alzheimers_detection;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-
-import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeScreen extends AppCompatActivity {
     Button playgame,instructions,settings,news,nearbydoctors,chatwithus,results;
@@ -29,7 +29,7 @@ public class HomeScreen extends AppCompatActivity {
         playgame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), Option_Screen.class);
+                Intent i=new Intent(getApplicationContext(),Option_Screen.class);
                 startActivity(i);
             }
         });
@@ -37,7 +37,7 @@ public class HomeScreen extends AppCompatActivity {
         results.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), Results.class);
+                Intent i=new Intent(getApplicationContext(),Results.class);
                 startActivity(i);
             }
         });
@@ -46,7 +46,7 @@ public class HomeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Put "instructions" activity in the below Intent and uncomment it
-                Intent i=new Intent(getApplicationContext(), Instructions.class);
+                Intent i=new Intent(getApplicationContext(),Instructions.class);
                 startActivity(i);
 
             }
@@ -55,7 +55,7 @@ public class HomeScreen extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), Settings.class);
+                Intent i=new Intent(getApplicationContext(),Settings.class);
                 startActivity(i);
 
             }
@@ -64,8 +64,8 @@ public class HomeScreen extends AppCompatActivity {
         chatwithus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* Intent i=new Intent(getApplicationContext(),Chatbot.class);
-                startActivity(i);*/
+                Intent i=new Intent(getApplicationContext(),Chatbot.class);
+                startActivity(i);
 
             }
         });
@@ -73,7 +73,7 @@ public class HomeScreen extends AppCompatActivity {
         nearbydoctors.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(getApplicationContext(), NearbyDoctors.class);
+                Intent i=new Intent(getApplicationContext(),NearbyDoctors.class);
                 startActivity(i);
 
             }
@@ -82,8 +82,8 @@ public class HomeScreen extends AppCompatActivity {
         news.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* Intent i=new Intent(getApplicationContext(),MyCommunities.class);
-                startActivity(i);*/
+                Intent i=new Intent(getApplicationContext(),MyCommunities.class);
+                startActivity(i);
             }
         });
     }

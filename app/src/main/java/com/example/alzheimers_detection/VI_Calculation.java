@@ -88,7 +88,7 @@ public class VI_Calculation extends AppCompatActivity {
                 question_number =1;
             else if(que.contains("three"))                      //GET QUE NUMBER
                 question_number =2;
-            }
+        }
 
 
         if(point==null)
@@ -151,8 +151,6 @@ public class VI_Calculation extends AppCompatActivity {
         dbUsers.child("calculation").setValue(score);
 
         Intent myIntent=new Intent(getApplicationContext(),VI_Sentence_Repetition_intro.class);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(myIntent);
     }
 
@@ -194,8 +192,6 @@ public class VI_Calculation extends AppCompatActivity {
         final Intent myIntent = new Intent(this, VI_Calculation_ans.class);
         myIntent.putExtra("Que_no",que_no[question_number]);
         myIntent.putExtra("Score",Score);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(myIntent);
     }
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)

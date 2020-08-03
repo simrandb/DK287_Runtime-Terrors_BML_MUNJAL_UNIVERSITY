@@ -47,8 +47,6 @@ public class VI_Attention extends AppCompatActivity {
 
 
                     Intent myIntent=new Intent(getApplicationContext(),VI_Calculation_intro.class);
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(myIntent);
                     VI_Attention.this.finish();
                     onPause();
@@ -94,7 +92,7 @@ public class VI_Attention extends AppCompatActivity {
         setContentView(R.layout.vi_attention);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
-       handler.postDelayed(runnable, 1000);
+        handler.postDelayed(runnable, 1000);
     }
 
     @Override

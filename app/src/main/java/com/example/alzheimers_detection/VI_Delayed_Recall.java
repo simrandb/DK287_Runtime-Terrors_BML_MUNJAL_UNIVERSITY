@@ -34,12 +34,12 @@ public class VI_Delayed_Recall extends AppCompatActivity {
     String[] option_for_5;
     String[] option_for_6;
 
-int seconds=1;
+    int seconds=1;
     public FirebaseAuth mAuth;
     DatabaseReference dbUsers;
     FirebaseUser fuser;
     String uid;
-int num;
+    int num;
     String[] que_no ={"one","two","three","four","five","six"};
     String[] correct_answer ={"left","right","down","left","down","down"};
     String[] Score_points={"zero","one","two","three"};
@@ -84,7 +84,7 @@ int num;
         else
         {
             //String done=point.concat(decimal);
-           // Toast.makeText(this, done, Toast.LENGTH_LONG).show();
+            // Toast.makeText(this, done, Toast.LENGTH_LONG).show();
         }
 
         answer.add(option_for_1);
@@ -224,8 +224,6 @@ int num;
                     dbUsers.child("numOfScores").setValue(num);
 
                     Intent myIntent=new Intent(getApplicationContext(), VI_Orientation_intro.class);
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(myIntent);
                 }
             }
@@ -280,8 +278,6 @@ int num;
         myIntent.putExtra("Que_no",que_no[question_number]);
         myIntent.putExtra("Score",Score);
         myIntent.putExtra("Decimal",Decimal);
-        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(myIntent);
     }
     void speak(String say, final int q,final int o1,final int o2,final int o3,final int o4,final int na ,final int finish){

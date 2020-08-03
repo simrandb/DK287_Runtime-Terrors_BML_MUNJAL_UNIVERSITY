@@ -38,8 +38,6 @@ public class VI_Verbal_fluency_intro extends AppCompatActivity {
             public void onClick(View v)
             {
                 Intent myIntent=new Intent(getApplicationContext(), VI_Verbal_fluency.class);
-                myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(myIntent);
                 //VI_Abstraction_intro.class
             }

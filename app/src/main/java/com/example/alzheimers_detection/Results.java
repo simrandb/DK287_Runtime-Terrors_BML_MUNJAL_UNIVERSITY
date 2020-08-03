@@ -83,16 +83,18 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
     int seconds=1,behaviouralResultOrNot=0;// if 1 , user has played behavioural questions .
     String uid;
     Button buttonQrc;
+    int count=0;
+    public FirebaseAuth mAuth;
+    DatabaseReference dbUsers;
     Double totscore;
     float totalFamilyHistoryScore,totalBehaviouralScore;
     TextView totalscore;
     Bitmap bitmap;
     int numOfPrevScores;
-    public FirebaseAuth mAuth;
     int prevScoreArray[]=new int[5];
     String prevDateArray[]=new String[5];
     ArrayList<Element> previousScoresList;
-
+    User user;
     int VI;
     LinearLayout graph;
 
@@ -104,7 +106,6 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
         getSupportActionBar().hide();
 
         previousScoresList = new ArrayList<>();
-        final DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("Users");
 
         FirebaseUser fuser;
         mAuth = FirebaseAuth.getInstance();
@@ -113,15 +114,15 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
         fuser = mAuth.getCurrentUser();
         uid=fuser.getUid();
-
-
-        userDBRef.addValueEventListener(new ValueEventListener() {
+        dbUsers= FirebaseDatabase.getInstance().getReference("Users");
+        dbUsers.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
                 TextView statement = findViewById(R.id.result_statement);
                 totalscore=findViewById(R.id.totalscore);
 
-                User user = dataSnapshot.child(uid).getValue(User.class);
+                user = dataSnapshot.child(uid).getValue(User.class);
                 VI=user.getVI();
                 if (VI==0)
                 {
@@ -143,25 +144,32 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                     progressTableAspects=user.getProgressTableAspects();
 
 
+
                     if(behaviouralResultOrNot==0)//If user has played optional behavioural stage
                     {
+                        Log.d("Excet",""+executivefunctioningScore);
+                        Log.d("abst",""+abstractionScore);
+                        Log.d("atten",""+attentionScore);
+
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + namingScore + visuoperceptionScore + delayedrecallScore + orientationScore + fluencyScore + executivefunctioningScore);
                         totscore = ((0.97) * totscore) + (0.03 * totalFamilyHistoryScore);
-                        totalscore.setText("Total : 60%");
-                        Toast.makeText((getApplicationContext()), "Results will be shown soon", Toast.LENGTH_SHORT).show();
+                        Log.d("orientation",""+orientationScore);
+                        totalscore.setText("Total Score :"+ Math.round(((totscore/30)*100)*100)/100+"%");
 
-                        if(totscore > 20){      //value 20 is not verified
+
+                        if(totscore > 25){      //value 20 is not verified
                             statement.setText(getResources().getString(R.string.result2));
                         } else {
                             statement.setText(getResources().getString(R.string.result1));
 
                         }
 
+
                     }
                     else if (behaviouralResultOrNot==1){//User hasnt played behavioural stage
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + namingScore + visuoperceptionScore + delayedrecallScore + orientationScore + fluencyScore + executivefunctioningScore);
                         totscore = ((0.95) * totscore) + (0.03 * totalFamilyHistoryScore) + (0.02 * totalBehaviouralScore);
-                        totalscore.setText("Total : 60%");
+                        totalscore.setText("Total Score :"+ Math.round(((totscore/30)*100)*100)/100+"%");
 
                         if(totscore > 25){//value 20 is not verified-simran changed it to greater than 25
                             statement.setText(getResources().getString(R.string.result2));
@@ -170,6 +178,25 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
                         }
                     }
+                    setBar(findViewById(R.id.set1), (int)((executivefunctioningScore/1)*100), R.color.fill_5, R.color.empty_5, "Executive Functioning");
+                    setBar(findViewById(R.id.set2), (int)((namingScore/4)*100), R.color.fill_4, R.color.empty_4, "Naming");
+
+                    setBar(findViewById(R.id.set3), (int)((abstractionScore/3)*100), R.color.fill_3, R.color.empty_3, "Abstraction");
+
+                    setBar(findViewById(R.id.set4), (int)((calculationScore/3)*100), R.color.fill_2, R.color.empty_2, "Calculation");
+
+                    setBar(findViewById(R.id.set5),(int)((orientationScore/6)*100), R.color.fill_1, R.color.empty_1,"Orientation");
+
+                    setBar(findViewById(R.id.set6), (int)((immediaterecallScore/2)*100), R.color.fill_5, R.color.empty_5,"Immediate Recall");
+
+                    setBar(findViewById(R.id.set7), (int)((attentionScore/3)*100), R.color.fill_4, R.color.empty_4, "Attention");
+
+                    setBar(findViewById(R.id.set8), (int)((visuoperceptionScore/3)*100), R.color.fill_3, R.color.empty_3,"Visuoperception");
+
+                    setBar(findViewById(R.id.set9), (int)((fluencyScore/2)*100), R.color.fill_2, R.color.empty_2,"Fluency");
+
+                    setBar(findViewById(R.id.set10),(int)((delayedrecallScore/3)*100), R.color.fill_1, R.color.empty_1, "Delayed Recall");
+
 
                 }
                 else
@@ -189,11 +216,22 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                     sentenceRepetitionScore=user.getSentenceRepetition();
                     memoryScore=user.getMemory();
 
-                    if(behaviouralResultOrNot==0)//If user has played optional behavioural stage
+                    Log.d("abstrscore",""+abstractionScore);
+                    Log.d("uid",""+uid);
+
+                    /*seconds=5;
+                    final Handler handler=new Handler();
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+
+                        }
+                    });*/
+                    if(behaviouralResultOrNot==0)//
                     {
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + memoryScore + sentenceRepetitionScore + delayedrecallScore + orientationScore + fluencyScore );
                         totscore = ((0.97) * totscore) + (0.03 * totalFamilyHistoryScore);
-                        // totalscore.setText("Total Score :"+ ((float)Math.round(totscore * 100) / 100)+"/30"+"\n(Stages+Family)");
+                        totalscore.setText("Total Score :"+ Math.round(((totscore/30)*100)*100)/100+"%");
 
 
                         if(totscore > 20){      //value 20 is not verified
@@ -207,7 +245,8 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                     else {//User hasnt played behavioural stage
                         totscore = (double) (abstractionScore + attentionScore + calculationScore + memoryScore + sentenceRepetitionScore + delayedrecallScore + orientationScore + fluencyScore );
                         totscore = ((0.95) * totscore) + (0.03 * totalFamilyHistoryScore) + (0.02 * totalBehaviouralScore);
-                        totalscore.setText("Total Score :"+ ((float)Math.round(totscore * 100) / 100)+"\n(Stages+Family+Behavioural)");
+                        totalscore.setText("Total Score :"+ Math.round(((totscore/30)*100)*100)/100+"%");
+                        totalscore.setText("Total :");
 
                         if(totscore > 25){//value 20 is not verified-simran changed it to greater than 25
                             statement.setText(getResources().getString(R.string.result2));
@@ -222,72 +261,40 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
 
 
+
+
+
                 numOfPrevScores =user.getNumOfScores();
 
-               /* if(numOfPrevScores==1) userDBRef.child(uid).child("Score1").setValue(((float)Math.round(totscore * 100) / 100));
+                Log.d("numofprev",""+numOfPrevScores);
+
+
+  /* if(numOfPrevScores==1) userDBRef.child(uid).child("Score1").setValue(((float)Math.round(totscore * 100) / 100));
                 else if(numOfPrevScores==2) userDBRef.child(uid).child("Score2").setValue(((float)Math.round(totscore * 100) / 100));
                 else if(numOfPrevScores==3) userDBRef.child(uid).child("Score3").setValue(((float)Math.round(totscore * 100) / 100));
                 else if(numOfPrevScores==4) userDBRef.child(uid).child("Score4").setValue(((float)Math.round(totscore * 100) / 100));
                 else userDBRef.child(uid).child("Score5").setValue(((float)Math.round(totscore * 100) / 100));*/
 
 
-                int index = (numOfPrevScores % 5) - 1;
-
-                String tag = "score" + (index + 1);
-                //userDBRef.child(uid).child(tag).setValue(((float)Math.round(totscore * 100) / 100));
-                prevScoreArray[0]=user.getScore1();
-                prevScoreArray[1]=user.getScore2();
-                prevScoreArray[2]=user.getScore3();
-                prevScoreArray[3]=user.getScore4();
-                prevScoreArray[4]=user.getScore5();
-
-                Calendar cal = Calendar.getInstance();
-                String dateToday = cal.get(Calendar.DATE) +"/"+ (cal.get(Calendar.MONTH) + 1) +"/"+ cal.get(Calendar.YEAR);
-                String tagDate = "date" + (index + 1);
-                userDBRef.child(uid).child(tagDate).setValue(dateToday);
-
-                prevDateArray[0]=user.getDate1();
-                prevDateArray[1]=user.getDate2();
-                prevDateArray[2]=user.getDate3();
-                prevDateArray[3]=user.getDate4();
-                prevDateArray[4]=user.getDate5();
-
-
-                for( int i=0; i < 5; i++){
-                    if(prevScoreArray[i] != -1){
-                        // previousScoresList.add(new Element(prevScoreArray[i],prevDateArray[i]));
-                    } else{
-                        break;
-                    }
-                }
-
-                //below code is for testing purpose only since no data is generated yet
-                if(previousScoresList.isEmpty()){
-                    previousScoresList.add(new Element(13,"1. 2/8/2020"));
-                    previousScoresList.add(new Element(17,"2. 2/8/2020"));
-                    previousScoresList.add(new Element(18,"3. 2/8/2020"));
-                }
-
-                //ALL PREV SCORE VALUES HAVE COME INTO ARRAY
-                //testing successful
-                //Toast.makeText(getApplicationContext()," "+abstractionScore+" "+attentionScore+" "+executivefunctioningScore,Toast.LENGTH_LONG).show();
-
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Log.e("UserListActivity", "Error occured");
+
             }
-
-
         });
 
-        seconds=3;
+
+        //ALL PREV SCORE VALUES HAVE COME INTO ARRAY
+        //testing successful
+        //Toast.makeText(getApplicationContext()," "+abstractionScore+" "+attentionScore+" "+executivefunctioningScore,Toast.LENGTH_LONG).show();
+
+
+        seconds=5;
         final Handler handler=new Handler();
         handler.post(new Runnable() {
             @Override
             public void run() {
-
 
                 if(seconds>0)
                 {
@@ -296,33 +303,74 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
                 }
                 else
                 {
+                    int index = (numOfPrevScores-1)%5;
+                    String tag = "score" + (index + 1);
+                    dbUsers.child(uid).child(tag).setValue(((float)Math.round(totscore * 100) / 100));
+
+                    prevScoreArray[0]=user.getScore1();
+                    prevScoreArray[1]=user.getScore2();
+                    prevScoreArray[2]=user.getScore3();
+                    prevScoreArray[3]=user.getScore4();
+                    prevScoreArray[4]=user.getScore5();
+
+                    Calendar cal = Calendar.getInstance();
+                    String dateToday = cal.get(Calendar.DATE) +"/"+ (cal.get(Calendar.MONTH) + 1) +"/"+ cal.get(Calendar.YEAR);
+                    String tagDate = "date" + (index + 1);
+                    dbUsers.child(uid).child(tagDate).setValue(dateToday);
+
+                    prevDateArray[0]=user.getDate1();
+                    prevDateArray[1]=user.getDate2();
+                    prevDateArray[2]=user.getDate3();
+                    prevDateArray[3]=user.getDate4();
+                    prevDateArray[4]=user.getDate5();
+
+
+                    for( int i=0; i < 5; i++){
+                        if(prevScoreArray[i] != -1){
+                            previousScoresList.add(new Element(prevScoreArray[i],prevDateArray[i]));
+                        } else{
+                            break;
+                        }
+                    }
+
+                    //below code is for testing purpose only since no data is generated yet
+                   /* if(previousScoresList.isEmpty()){
+                        previousScoresList.add(new Element(50,"1. 10/1/2020"));
+                        previousScoresList.add(new Element(100,"2. 11/2/2020"));
+                        previousScoresList.add(new Element(100,"3. 27/5/2020"));
+                    }*/
+
                     if (VI==0) {
-                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) 3 + "     " + (int) 1 + " " + (int) 2 + " " + (int) 1 + " " + (int) 2 + " " + (int) 3 + " " + (int) 1 + " " + (int) 2 + " " + (int) 2 + " " + (int) 1 + " " + (int) 3 + " " + ((float) Math.round(21 * 100) / 100));
-                        userDBRef.child(uid).child("progressTableAspects").setValue(progressTableAspects);
+                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) numOfPrevScores + "     " + (int) executivefunctioningScore + " " + (int) namingScore + " " + (int) abstractionScore + " " + (int) calculationScore + " " + (int) orientationScore + " " + (int) immediaterecallScore + " " + (int) attentionScore + " " + (int) visuoperceptionScore + " " + (int) fluencyScore + " " + (int) delayedrecallScore + " " + ((float) Math.round(totscore * 100) / 100));
+                        dbUsers.child(uid).child("progressTableAspects").setValue(progressTableAspects);
 
                         if (behaviouralResultOrNot == 1) {
-                            userDBRef.child(uid).child("textFile").setValue(family_behavioural_info + behavioural_info + progressTableAspects);
+                            dbUsers.child(uid).child("textFile").setValue(family_behavioural_info + behavioural_info + progressTableAspects);
                         } else {
-                            userDBRef.child(uid).child("textFile").setValue(family_behavioural_info + progressTableAspects);
+                            dbUsers.child(uid).child("textFile").setValue(family_behavioural_info + progressTableAspects);
                         }
                     }
 
                     else
                     {
-                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) 4 + "     " + (int) memoryScore + " " + (int) attentionScore + " " + (int) calculationScore + " " + (int) sentenceRepetitionScore + " " + (int) fluencyScore + " " + (int) abstractionScore + " " + (int) delayedrecallScore + " " + (int) orientationScore +" " + ((float) Math.round(totscore * 100) / 100));
-                        userDBRef.child(uid).child("progressTableAspects").setValue(progressTableAspects);
+                        progressTableAspects = progressTableAspects + ("\nTrial " + (int) numOfPrevScores + "     " + (int) memoryScore + " " + (int) attentionScore + " " + (int) calculationScore + " " + (int) sentenceRepetitionScore + " " + (int) fluencyScore + " " + (int) abstractionScore + " " + (int) delayedrecallScore + " " + (int) orientationScore +" " + ((float) Math.round(totscore * 100) / 100));
+                        dbUsers.child(uid).child("progressTableAspects").setValue(progressTableAspects);
 
                         if (behaviouralResultOrNot == 1) {
-                            userDBRef.child(uid).child("textFile").setValue(family_behavioural_info + behavioural_info + progressTableAspects);
+                            dbUsers.child(uid).child("textFile").setValue(family_behavioural_info + behavioural_info + progressTableAspects);
                         } else {
-                            userDBRef.child(uid).child("textFile").setValue(family_behavioural_info + progressTableAspects);
+                            dbUsers.child(uid).child("textFile").setValue(family_behavioural_info + progressTableAspects);
                         }
                     }
 
                 }
+                if(count == 0) {
+                    setScoringBoard();
+                    count++;
+                }
+
             }
         });
-        setScoringBoard();
 
         //previous scores
         findViewById(R.id.previousResults).setOnClickListener(this);
@@ -449,25 +497,25 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
     }
     void setScoringBoard(){
 
-        setBar(findViewById(R.id.set1), 100, R.color.fill_5, R.color.empty_5, "Executive Functioning");
+        setBar(findViewById(R.id.set1), (int)((executivefunctioningScore/1)*100), R.color.fill_5, R.color.empty_5, "Executive Functioning");
+        Toast.makeText(this,""+abstractionScore,Toast.LENGTH_LONG).show();
+        setBar(findViewById(R.id.set2), (int)((namingScore/4)*100), R.color.fill_4, R.color.empty_4, "Naming");
 
-        setBar(findViewById(R.id.set2), 50, R.color.fill_4, R.color.empty_4, "Naming");
+        setBar(findViewById(R.id.set3), (int)((abstractionScore/3)*100), R.color.fill_3, R.color.empty_3, "Abstraction");
 
-        setBar(findViewById(R.id.set3), 34, R.color.fill_3, R.color.empty_3, "Abstraction");
+        setBar(findViewById(R.id.set4), (int)((calculationScore/3)*100), R.color.fill_2, R.color.empty_2, "Calculation");
 
-        setBar(findViewById(R.id.set4), 67, R.color.fill_2, R.color.empty_2, "Calculation");
+        setBar(findViewById(R.id.set5),(int)((orientationScore/6)*100), R.color.fill_1, R.color.empty_1,"Orientation");
 
-        setBar(findViewById(R.id.set5),50, R.color.fill_1, R.color.empty_1,"Orientation");
+        setBar(findViewById(R.id.set6), (int)((immediaterecallScore/2)*100), R.color.fill_5, R.color.empty_5,"Immediate Recall");
 
-        setBar(findViewById(R.id.set6), 34, R.color.fill_5, R.color.empty_5,"Immediate Recall");
+        setBar(findViewById(R.id.set7), (int)((attentionScore/3)*100), R.color.fill_4, R.color.empty_4, "Attention");
 
-        setBar(findViewById(R.id.set7), 67, R.color.fill_4, R.color.empty_4, "Attention");
+        setBar(findViewById(R.id.set8), (int)((visuoperceptionScore/3)*100), R.color.fill_3, R.color.empty_3,"Visuoperception");
 
-        setBar(findViewById(R.id.set8), 34, R.color.fill_3, R.color.empty_3,"Visuoperception");
+        setBar(findViewById(R.id.set9), (int)((fluencyScore/2)*100), R.color.fill_2, R.color.empty_2,"Fluency");
 
-        setBar(findViewById(R.id.set9), 50, R.color.fill_2, R.color.empty_2,"Fluency");
-
-        setBar(findViewById(R.id.set10),60, R.color.fill_1, R.color.empty_1, "Delayed Recall");
+        setBar(findViewById(R.id.set10),(int)((delayedrecallScore/3)*100), R.color.fill_1, R.color.empty_1, "Delayed Recall");
 
     }
 
@@ -529,11 +577,11 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
             set1.setLineWidth(2f);
             set1.setCircleRadius(6f);
+            set1.setValueTextColor(Color.WHITE);
             set1.setDrawCircleHole(false);
             set1.setValueTextSize(9f);
             set1.setDrawFilled(true);
             set1.setFormLineWidth(1f);
-            set1.setValueTextColor(Color.WHITE);
             set1.setFormLineDashEffect(new DashPathEffect(new float[]{10f, 5f}, 0f));
             set1.setFormSize(10.f);
             if (Utils.getSDKInt() >= 18) {
@@ -551,99 +599,5 @@ public class Results extends AppCompatActivity implements View.OnClickListener{
 
         mChart.setDrawGridBackground(false);
     }
-
-    /*@Override
-    public void onClick(View v) {
-        int id = v.getId();
-        switch (id){
-            case R.id.previousResults :
-                LayoutInflater layoutInflater =
-                        (LayoutInflater) getBaseContext()
-                                .getSystemService(LAYOUT_INFLATER_SERVICE);
-                View popupView = layoutInflater.inflate(R.layout.scoring_popup, null);
-                final PopupWindow popupWindow = new PopupWindow(
-                        popupView, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
-                popupWindow.setOutsideTouchable(true);
-
-
-                final ScrollView layout = findViewById(R.id.scorescreen);
-
-                //to set height and width of a popup
-                int height = layout.getHeight();
-                popupWindow.setHeight(height / 2);
-                    /*int width = layout.getWidth();
-                    popupWindow.setWidth(2*width/3);*/
-
-
-                /*Button cancel = (Button) popupView.findViewById(R.id.button_back);
-
-                // Lookup the recyclerview in activity layout
-                RecyclerView rvContacts = popupView.findViewById(R.id.rvContacts);
-
-                // Initialize contacts
-                //ArrayList<Element> scoreList = Element.createScoreList(numOfPrevScores);
-                // Create adapter passing in the sample user data
-                RecyclerViewAdapter adapter = new RecyclerViewAdapter(previousScoresList);
-                // Attach the adapter to the recyclerview to populate items
-                rvContacts.setAdapter(adapter);
-                // Set layout manager to position the items
-                rvContacts.setLayoutManager(new LinearLayoutManager(Results.this));
-                // That's all!
-
-                cancel.setOnClickListener(new Button.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        popupWindow.dismiss();
-                    }
-                });
-
-                popupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
-                break;
-
-
-            case R.id.buttonGraph:
-                LayoutInflater layoutInflater2 =
-                        (LayoutInflater) getBaseContext()
-                                .getSystemService(LAYOUT_INFLATER_SERVICE);
-                View popupView2 = layoutInflater2.inflate(R.layout.linegraph_popup, null);
-                final PopupWindow popupWindow2 = new PopupWindow(
-                        popupView2, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
-                popupWindow2.setOutsideTouchable(true);
-
-
-                final ScrollView layout2 = findViewById(R.id.scorescreen);
-
-                //to set height and width of a popup
-                int height2 = layout2.getHeight();
-                popupWindow2.setHeight(height2 / 2);
-                int width2 = layout2.getWidth();
-                popupWindow2.setWidth(4*width2/5);
-                setLineGraph(popupView2);
-
-                Button back = (Button) popupView2.findViewById(R.id.button_back);
-
-
-                back.setOnClickListener(new Button.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        popupWindow2.dismiss();
-
-                    }
-                });
-
-                popupWindow2.showAtLocation(popupView2, Gravity.CENTER, 0, 0);
-                break;
-
-
-            case R.id.buttonQrc: Intent i=new Intent(getApplicationContext(),QRC.class);
-                startActivity(i);
-                break;
-
-            case R.id.buttonHome: Intent i2=new Intent(getApplicationContext(),HomeScreen.class);
-                startActivity(i2);
-                break;
-
-        }
-    }*/
 
 }

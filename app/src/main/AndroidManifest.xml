@@ -58,6 +58,9 @@
         <activity android:name=".Option_Screen" />
         <activity android:name=".NearbyDoctors"/>
         <activity android:name=".Roadmap" />
+        <activity android:name=".Chatbot"/>
+        <activity android:name=".MyCommunities"/>
+        <activity android:name=".WebViewConnectPeople"/>
 
 
         <!-- 10 Stages -->
@@ -78,6 +81,7 @@
         <activity android:name=".Orientation_Intro" />
         <activity android:name=".Orientation" />
         <activity android:name=".ImmediateRecall_Intro" >
+
 
         </activity>
         <activity android:name=".Immediate_recallPlayVideo" />

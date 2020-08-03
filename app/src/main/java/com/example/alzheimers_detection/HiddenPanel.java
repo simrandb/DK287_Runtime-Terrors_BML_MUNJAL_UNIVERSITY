@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 
 class HiddenPanel {
+
+    String description;
 
     //call this method to show a pop up
     @SuppressLint("WrongViewCast")
@@ -35,26 +38,49 @@ class HiddenPanel {
         layout.findViewById(R.id.how_to_play).setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(stage_name.contains("ExecutiveFunctioning"))
-                    change_stage1(c);
+                    description = "You are “ "+"xyz"+" the Thief ! ”"+"\nEach coin inside the cave has a number or alphabet engraved on it.\n\nTap these coins to " +
+                            "collect them into sack such that a number is followed by its corresponding alphabet, in " +
+                            "increasing order, making an alternate trail.";
                 if(stage_name.contains("Naming"))
-                    change_stage2(c);
+                    description = "\nYou are in Jungle Safari and you spot four animals.\n\n\n" +
+                            "Tap on the jumbled alphabets to arrange them in order to form appropriate name of the animal.";
                 if(stage_name.contains("Abstraction"))
-                    change_stage3(c);
+                    description = "\nMultiple items corresponding to three different categories namely -\n Sports, Instruments and Fruits \nare displayed on a shelf."+"\n\nDrag and drop each item into its corresponding " +
+                            "basket to empty\n the shelf.";
                 if(stage_name.contains("Calculation"))
-                    change_stage4(c);
+                    description = "\n\nFly and enjoy through three \nlevels of sky. \n\nTap on the cloud with greater value to burst it and move to a higher level in the sky.";
                 if(stage_name.contains("Orientation"))
-                    change_stage5(c);
+                    description = "\nYou are "+"xyz"+", the Chief Editor of “The Alzheimer’s Times “! An incomplete Newspaper format" +
+                            " \nwill be shown.\nClick on the highlighted fields to select the appropriate details and complete the" +
+                            " format.";
                 if(stage_name.contains("ImmediateRecall"))
-                    change_stage6(c);
+                    description = "\nAnswer the next two questions based on the previous video."+
+                            "\n\n\nNote that you cannot go back to any of the questions that you have already answered.";
                 if(stage_name.contains("Attention"))
-                    change_stage7(c);
-                if(stage_name.contains("Visuoperception"))
-                    change_stage8(c);
+                    description = "\nYou are \n“"+"xyz"+" – The Doughnut Seller“.\n\nLook at each doughnut carefully and answer in terms of" +
+                            " \n“YES / NO” based on whether the previous doughnut is same as the current one.";                if(stage_name.contains("Visuoperception"))
                 if(stage_name.contains("Fluency"))
-                    change_stage9(c);
+                    description = "\nPress the microphone on the screen, and speak as many words as you can, think of words from the " +
+                            "letter given in 60 seconds.\n\nWords that are proper nouns, numbers, and different forms of a verb " +
+                            "are not permitted.";
                 if(stage_name.contains("DelayedRecall"))
-                    change_stage10(c);
+                    description = "\nRecall the story from Caterpillar's adventure, and answer six related " +
+                            "questions.\n\nNote that you cannot go back to any of the questions that you have already answered.";
+
+                new CountDownTimer(500,500){
+
+                    @Override
+                    public void onTick(long millisUntilFinished) {
+                    }
+
+                    @Override
+                    public void onFinish() {
+                        PopUp_PlayGame p = new PopUp_PlayGame();
+                        p.showPopUp(c,description);
+                    }
+                }.start();
                 pw.dismiss();
+
             }
         });
         layout.findViewById(R.id.exit).setOnClickListener(new View.OnClickListener() {
@@ -157,65 +183,6 @@ class HiddenPanel {
         c.startActivity(myIntent);
     }
 
-    private void change_stage10(Context c) {
-        Intent myIntent = new Intent(c, DelayedRecall.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage9(Context c) {
-        Intent myIntent = new Intent(c, Fluency.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage8(Context c) {
-        Intent myIntent = new Intent(c, Visuoperception.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage7(Context c) {
-        Intent myIntent = new Intent(c, Attention.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage6(Context c) {
-        Intent myIntent = new Intent(c, ImmediateRecall.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage5(Context c) {
-        Intent myIntent = new Intent(c, Orientation.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage4(Context c) {
-        Intent myIntent = new Intent(c, Calculation.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage3(Context c) {
-        Intent myIntent = new Intent(c, Abstraction.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage2(Context c) {
-        Intent myIntent = new Intent(c, Naming4.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
-
-    private void change_stage1(Context c) {
-        Intent myIntent = new Intent(c, ExecutiveFunctioning.class);
-        myIntent.putExtra("Play", "no");
-        c.startActivity(myIntent);
-    }
 }
 
 

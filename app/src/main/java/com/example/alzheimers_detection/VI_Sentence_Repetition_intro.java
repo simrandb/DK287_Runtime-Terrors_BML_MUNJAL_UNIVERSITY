@@ -36,8 +36,6 @@ public class VI_Sentence_Repetition_intro extends AppCompatActivity {
                 if (done) {  //if speaker is finished talking then allow to tap to go to next activity
                     sp.destroy();
                     Intent myIntent = new Intent(getApplicationContext(), VI_Sentence_Repetition.class);
-                    myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                     startActivity(myIntent);
                 }
             }
@@ -45,7 +43,7 @@ public class VI_Sentence_Repetition_intro extends AppCompatActivity {
     }
 
 
-        void speak(String say){
+    void speak(String say){
         //call speakOut function
         sp.speakOut(say); //need minimum api level 21
 

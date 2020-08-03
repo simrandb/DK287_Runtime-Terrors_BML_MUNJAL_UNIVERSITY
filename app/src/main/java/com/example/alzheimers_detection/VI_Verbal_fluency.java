@@ -313,7 +313,7 @@ public class VI_Verbal_fluency extends AppCompatActivity implements RecognitionL
             public void onFinish() {
                 onStop();
                 speech.destroy();
-               // tts.destroy();
+                // tts.destroy();
                 stopSpeech = true;
                 screen.setBackgroundColor(getResources().getColor(R.color.Black));
 
@@ -330,8 +330,6 @@ public class VI_Verbal_fluency extends AppCompatActivity implements RecognitionL
                         dbUsers.child("fluency").setValue(correctWords);
 
                         Intent myIntent=new Intent(getApplicationContext(),VI_Abstraction_intro.class);
-                        myIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        myIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                         startActivity(myIntent);
                         VI_Verbal_fluency.this.finish();
                     }

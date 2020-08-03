@@ -14,7 +14,7 @@ import java.util.Date;
 
 public class User {
     int closerelative;
-    float executiveFunctioning=-1;
+    float executiveFunctioning=0;
     float naming=0;
     float abstraction=0;
     float calculation=0;

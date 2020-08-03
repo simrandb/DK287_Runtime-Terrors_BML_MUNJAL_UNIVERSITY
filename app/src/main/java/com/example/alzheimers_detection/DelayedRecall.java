@@ -79,117 +79,102 @@ public class DelayedRecall extends AppCompatActivity {
         urlnext="https://firebasestorage.googleapis.com/v0/b/alzheimers-detection.appspot.com/o/nextgreenbutton.png?alt=media&token=60064096-a57e-4aa0-8cb7-511e933d97ca";
         Picasso.with(this).load(urlnext).into(next);
         Picasso.with(this).load(urlcaterpillar).into(caterpillar);
-          new CountDownTimer(1000,1000){
+        new CountDownTimer(1000,1000){
 
-                @Override
-                public void onTick(long millisUntilFinished) {
-                }
+            @Override
+            public void onTick(long millisUntilFinished) {
+            }
 
-                @Override
-                public void onFinish() {
-                    PopUp_PlayGame p = new PopUp_PlayGame();
-                    p.showPopUp(DelayedRecall.this,description);
-                }
-            }.start();
+            @Override
+            public void onFinish() {
+                PopUp_PlayGame p = new PopUp_PlayGame();
+                p.showPopUp(DelayedRecall.this,description);
+            }
+        }.start();
 
-            mButtonChoice1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mButtonChoice1.setBackgroundResource(R.drawable.roundbuttonimmediaterecall2);
-                    mButtonChoice2.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
-                    mButtonChoice3.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
+        mButtonChoice1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mButtonChoice1.setBackgroundResource(R.drawable.roundbuttonimmediaterecall2);
+                mButtonChoice2.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
+                mButtonChoice3.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
 
-                }
-            });
+            }
+        });
 
-            mButtonChoice2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mButtonChoice2.setBackgroundResource(R.drawable.roundbuttonimmediaterecall2);
-                    mButtonChoice1.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
-                    mButtonChoice3.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
+        mButtonChoice2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mButtonChoice2.setBackgroundResource(R.drawable.roundbuttonimmediaterecall2);
+                mButtonChoice1.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
+                mButtonChoice3.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
 
-                }
-            });
-            mButtonChoice3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    mButtonChoice3.setBackgroundResource(R.drawable.roundbuttonimmediaterecall2);
-                    mButtonChoice1.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
-                    mButtonChoice2.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
+            }
+        });
+        mButtonChoice3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mButtonChoice3.setBackgroundResource(R.drawable.roundbuttonimmediaterecall2);
+                mButtonChoice1.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
+                mButtonChoice2.setBackgroundResource(R.drawable.roundbuttonimmediaterecall);
 
-                }
-            });
+            }
+        });
 
-            next.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(mButtonChoice1.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.roundbuttonimmediaterecall2).getConstantState()))
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mButtonChoice1.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.roundbuttonimmediaterecall2).getConstantState()))
+                {
+                    if(mButtonChoice1.getText().toString().equals(myQuestionLibrary.mCorrect_answer[counter]))
                     {
-                        if(mButtonChoice1.getText().toString().equals(myQuestionLibrary.mCorrect_answer[counter]))
-                        {
-                            mScore+=0.5;
-                        }
-                        updateQuestion();
+                        mScore+=0.5;
                     }
-                    else if(mButtonChoice2.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.roundbuttonimmediaterecall2).getConstantState()))
+                    updateQuestion();
+                }
+                else if(mButtonChoice2.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.roundbuttonimmediaterecall2).getConstantState()))
+                {
+                    if(mButtonChoice2.getText().toString().equals(myQuestionLibrary.mCorrect_answer[counter]))
                     {
-                        if(mButtonChoice2.getText().toString().equals(myQuestionLibrary.mCorrect_answer[counter]))
-                        {
-                            mScore+=0.5;
-                        }
-                        updateQuestion();
+                        mScore+=0.5;
                     }
-                    else if(mButtonChoice3.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.roundbuttonimmediaterecall2).getConstantState()))
+                    updateQuestion();
+                }
+                else if(mButtonChoice3.getBackground().getConstantState().equals(getResources().getDrawable(R.drawable.roundbuttonimmediaterecall2).getConstantState()))
+                {
+                    if(mButtonChoice3.getText().toString().equals(myQuestionLibrary.mCorrect_answer[counter]))
                     {
-                        if(mButtonChoice3.getText().toString().equals(myQuestionLibrary.mCorrect_answer[counter]))
-                        {
-                            mScore+=0.5;
-                        }
-                        updateQuestion();
+                        mScore+=0.5;
                     }
+                    updateQuestion();
+                }
 
-                    if(counter==6)
-                    {
-                        fuser = mAuth.getCurrentUser();
-                        uid=fuser.getUid();
-                        dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
-                        dbUsers.child("delayedRecall").setValue(mScore);
+                if(counter==6)
+                {
+                    fuser = mAuth.getCurrentUser();
+                    uid=fuser.getUid();
+                    dbUsers= FirebaseDatabase.getInstance().getReference("Users/"+uid);
+                    dbUsers.child("delayedRecall").setValue(mScore);
 
-                        DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("Users");
+                    DatabaseReference userDBRef = FirebaseDatabase.getInstance().getReference("Users");
 
-                        FirebaseUser fuser;
-                        mAuth = FirebaseAuth.getInstance();
-                        fuser = mAuth.getCurrentUser();
-                        uid=fuser.getUid();
-                        userDBRef.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                User user = dataSnapshot.child(uid).getValue(User.class);
-                                num=user.getNumOfScores();
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-                                Log.e("UserListActivity", "Error occured");
-                            }
+                    FirebaseUser fuser;
+                    mAuth = FirebaseAuth.getInstance();
+                    fuser = mAuth.getCurrentUser();
+                    uid=fuser.getUid();
 
 
-                        });
-                        num++;
-                        dbUsers.child("numOfScores").setValue(num);
 
-
-                        Popup_aftergame panel = new Popup_aftergame();
-                        panel.showPopUp(DelayedRecall.this, stage_name);
+                    Popup_aftergame panel = new Popup_aftergame();
+                    panel.showPopUp(DelayedRecall.this, stage_name);
 
                        /* Intent i=new Intent(getApplicationContext(),AskForJournal.class);
                         startActivity(i);*/
-                    }
                 }
-            });
+            }
+        });
 
-        }
+    }
 
     public  void  updateQuestion()
     {
